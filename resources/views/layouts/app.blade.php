@@ -16,7 +16,6 @@
 
 <body>
         
-    @yield('body-content')
     @include('sections.backtotop')
 
     <div id="techynaf-page"> 
