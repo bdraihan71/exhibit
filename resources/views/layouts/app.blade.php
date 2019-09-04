@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Exhibit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="{{ url('/frontend/image/png') }}" href="images/favicon.png" />
+    <link rel="icon" type="image/png" href="{{ url('/frontend/images/favicon.png') }}" />
     <link href="https://fonts.googleapis.com/css?family=Rambla:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/frontend/css/animate.css">
     <link rel="stylesheet" href="/frontend/css/themify-icons.css">
