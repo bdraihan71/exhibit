@@ -42,6 +42,14 @@
                                     <p>{{ $experience->description }}</p>
                                 </div>
                             </li>
+                            <li>
+                                <a href="{{ route('experience.edit', $experience->id)}}" class="btn btn-primary">Edit</a>
+                                <form action="{{ route('experience.delete', $experience->id)}}" onclick="return confirm('Are you sure, you want to delete ?')" method="post" style="display: inline;">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                </form>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
