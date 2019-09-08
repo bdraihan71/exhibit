@@ -33,6 +33,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/education/edit/{id}', 'EducationController@edit')->name('education.edit');
     Route::patch('/education/{id}', 'EducationController@update')->name('education.update');
 
+    //testimonial
+    Route::Post('/testimonial', 'TestimonialController@store')->name('testimonial.store');
+    Route::delete('/testimonial/{id}', 'TestimonialController@destroy')->name('testimonial.delete');
+    Route::get('/testimonial/edit/{id}', 'TestimonialController@edit')->name('testimonial.edit');
+    Route::patch('/testimonial/{id}', 'TestimonialController@update')->name('testimonial.update');
+
 });
 
 
