@@ -15,31 +15,17 @@
 </head>
 
 <body>
-        
+
     @include('sections.backtotop')
 
-    <div id="techynaf-page"> 
+    <div id="techynaf-page">
 
         @include('sections.aside')
 
         <!-- Main Section -->
         <div id="techynaf-main">
-            
-            @include('sections.informations')
 
-            @include('sections.experience')
-
-            @include('sections.education')
-
-            @include('sections.skills')
-
-            @include('sections.projects')
-
-            @include('sections.testimonials')
-
-            @include('sections.contact')
-
-            @include('sections.footer')
+            @yield('content')
 
         </div>
 
