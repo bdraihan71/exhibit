@@ -16,7 +16,7 @@ class CreateExperiencesTable extends Migration
         Schema::create('experiences', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->date('join');
-            $table->date('disjoin');
+            $table->date('disjoin')->nullable();
             $table->string('company_name');
             $table->string('designation');
             $table->text('description');
