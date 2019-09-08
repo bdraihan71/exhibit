@@ -24,6 +24,12 @@ Route::middleware(['auth'])->group(function () {
     //experience
     Route::Post('/experience', 'ExperienceController@store')->name('experience.store');
 
+    //education
+    Route::Post('/education', 'EducationController@store')->name('education.store');
+    Route::delete('/education/{id}', 'EducationController@destroy')->name('education.delete');
+    Route::get('/education/edit/{id}', 'EducationController@edit')->name('education.edit');
+    Route::patch('/education/{id}', 'EducationController@update')->name('education.update');
+
 });
 
 
