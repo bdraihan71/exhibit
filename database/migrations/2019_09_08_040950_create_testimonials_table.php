@@ -18,6 +18,7 @@ class CreateTestimonialsTable extends Migration
             $table->text('description');
             $table->string('name');
             $table->string('designation');
+            $table->string('company');
             $table->timestamps();
         });
     }
