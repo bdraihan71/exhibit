@@ -16,8 +16,10 @@ Route::get('/', function () {
 });
 Route::get('/logout', 'Auth\LoginController@logout');
 
-Route::middleware(['auth', 'role-permit'])->group(function () {
-    
+Route::middleware(['auth'])->group(function () {
+    //main
+    Route::get('/edit', 'MainController@index')->name('mainedit');
+
 });
 
 
