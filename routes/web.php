@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('layouts.main');
 });
+Route::get('/logout', 'Auth\LoginController@logout');
+
+Route::middleware(['auth', 'role-permit'])->group(function () {
+    
+});
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
