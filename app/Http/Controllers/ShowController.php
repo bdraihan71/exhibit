@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Experience;
 use Illuminate\Http\Request;
 
-class MainController extends Controller
+class ShowController extends Controller
 {
     public function index()
     {
