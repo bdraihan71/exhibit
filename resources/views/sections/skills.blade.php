@@ -14,19 +14,19 @@
             <div class="col-md-7 animate-box" data-animate-effect="fadeInLeft">
                 <p class="bar-title">JavaScript<span class="percent align-right">90%</span></p>
                 <div class="bar">
-                    <div class="bar-fill bar-fill-developer start"></div>
+                    <div style="width:90%;" class="bar-fill bar-fill-skill start"></div>
                 </div>
                 <p class="bar-title">PHP<span class="percent align-right">80%</span></p>
                 <div class="bar">
-                    <div class="bar-fill bar-fill-photoshop start"></div>
+                    <div style="width:80%;" class="bar-fill bar-fill-skill start"></div>
                 </div>
                 <p class="bar-title">HTML / CSS<span class="percent align-right">95%</span></p>
                 <div class="bar">
-                    <div class="bar-fill bar-fill-webdesign start"></div>
+                    <div  style="width:95%;"class="bar-fill bar-fill-skill start"></div>
                 </div>
-                <p class="bar-title">jQuery<span class="percent align-right">85%</span></p>
+                <p class="bar-title">jQuery<span class="percent align-right">80%</span></p>
                 <div class="bar">
-                    <div class="bar-fill bar-fill-socialmedia start"></div>
+                    <div style="width:80%;" class="bar-fill bar-fill-skill start"></div>
                 </div>
             </div>
         </div>
