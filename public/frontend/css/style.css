@@ -1738,146 +1738,30 @@ ul.social-network li {
 
 /* Animations for Skills Progress Bar */
 
-.bar-fill-developer {
-    width: 90%;
+.bar-fill-skill {
     background: linear-gradient(169deg, rgba(39,182,165,1) 0%, rgba(30,53,103,1) 77%);
-    animation: bar-fill-developer 2s ease-out;
-    -moz-animation: bar-fill-developer 2s ease-out;
-    -webkit-animation: bar-fill-developer 2s ease-out;
+    animation: bar-fill-skill 2s ease-out;
+    -moz-animation: bar-fill-skill 2s ease-out;
+    -webkit-animation: bar-fill-skill 2s ease-out;
 }
 
-@keyframes bar-fill-developer {
+@keyframes bar-fill-skill {
     0% {
         width: 0px;
     }
-    100% {
-        width: 90%;
-    }
 }
 
-@-moz-keyframes bar-fill-developer {
+@-moz-keyframes bar-fill-skill {
     0% {
         width: 0px;
     }
-    100% {
-        width: 90%;
-    }
 }
 
-@-webkit-keyframes bar-fill-developer {
+@-webkit-keyframes bar-fill-skill {
     0% {
         width: 0px;
     }
-    100% {
-        width: 90%;
-    }
 }
-
-.bar-fill-photoshop {
-    width: 80%;
-    background: linear-gradient(169deg, rgba(39,182,165,1) 0%, rgba(30,53,103,1) 77%);
-    animation: bar-fill-photoshop 2s ease-out;
-    -moz-animation: bar-fill-photoshop 2s ease-out;
-    -webkit-animation: bar-fill-photoshop 2s ease-out;
-}
-
-@keyframes bar-fill-photoshop {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 80%;
-    }
-}
-
-@-moz-keyframes bar-fill-photoshop {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 80%;
-    }
-}
-
-@-webkit-keyframes bar-fill-photoshop {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 80%;
-    }
-}
-
-.bar-fill-webdesign {
-    width: 95%;
-    background: linear-gradient(169deg, rgba(39,182,165,1) 0%, rgba(30,53,103,1) 77%);
-    animation: bar-fill-webdesign 2s ease-out;
-    -moz-animation: bar-fill-webdesign 2s ease-out;
-    -webkit-animation: bar-fill-webdesign 2s ease-out;
-}
-
-@keyframes bar-fill-webdesign {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 95%;
-    }
-}
-
-@-moz-keyframes bar-fill-webdesign {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 95%;
-    }
-}
-
-@-webkit-keyframes bar-fill-webdesign {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 95%;
-    }
-}
-
-.bar-fill-socialmedia {
-    width: 85%;
-    background: linear-gradient(169deg, rgba(39,182,165,1) 0%, rgba(30,53,103,1) 77%);
-    animation: bar-fill-socialmedia 2s ease-out;
-    -moz-animation: bar-fill-socialmedia 2s ease-out;
-    -webkit-animation: bar-fill-socialmedia 2s ease-out;
-}
-
-@keyframes bar-fill-socialmedia {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 85%;
-    }
-}
-
-@-moz-keyframes bar-fill-socialmedia {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 85%;
-    }
-}
-
-@-webkit-keyframes bar-fill-socialmedia {
-    0% {
-        width: 0px;
-    }
-    100% {
-        width: 85%;
-    }
-}
-
 
 /* 15. Timeline styles */
 
