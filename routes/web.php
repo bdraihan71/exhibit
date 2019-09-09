@@ -39,6 +39,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/testimonial/edit/{id}', 'TestimonialController@edit')->name('testimonial.edit');
     Route::patch('/testimonial/{id}', 'TestimonialController@update')->name('testimonial.update');
 
+    //skill
+    Route::Post('/skill', 'SkillController@store')->name('skill.store');
+    Route::delete('/skill/{id}', 'SkillController@destroy')->name('skill.delete');
+    Route::get('/skill/edit/{id}', 'SkillController@edit')->name('skill.edit');
+    Route::patch('/skill/{id}', 'SkillController@update')->name('skill.update');
+
 });
 
 
