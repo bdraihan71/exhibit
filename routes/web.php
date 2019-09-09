@@ -45,6 +45,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/skill/edit/{id}', 'SkillController@edit')->name('skill.edit');
     Route::patch('/skill/{id}', 'SkillController@update')->name('skill.update');
 
+    //profile
+    // Route::Post('/profile', 'ProfileController@store')->name('profile.store');
+    // Route::delete('/profile/{id}', 'ProfileController@destroy')->name('profile.delete');
+    // Route::get('/profile', 'ProfileController@edit')->name('profile.edit');
+    Route::patch('/profile', 'ProfileController@update')->name('profile.update');
 });
 
 
