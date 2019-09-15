@@ -1,91 +1,70 @@
-<!-- Projects -->
-<div id="projects" class="techynaf-projects mb-4">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12"> <span class="heading-meta style-1">Take a Look at</span>
-                <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">My Projects</h2> </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                <a href="#" class="desc">
-                    <div class="project"> <img src="/frontend/images/portfolio/dscc-logo.png" class="img-fluid" alt="">
-                        <div class="desc">
-                            <div class="con">
-                                <h3>Project 01</h3> <span>Web Design, Web Development</span> </div>
-                        </div>
-                    </div>
-                </a>
+@guest
+    <!-- Projects -->
+    <div id="projects" class="techynaf-projects mb-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12"> <span class="heading-meta style-1">Take a Look at</span>
+                    <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">My Projects</h2> </div>
             </div>
-            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                <a href="#" class="desc">
-                    <div class="project"> <img src="/frontend/images/portfolio/usds-logo.png" class="img-fluid" alt="">
-                        <div class="desc">
-                            <div class="con">
-                                <h3>Project 02</h3> <span>Web Design, Web Development</span> </div>
-                        </div>
+            <div class="row">
+                @foreach ($projects as $project)
+                    <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                        <a href="#" class="desc">
+                            <div class="project"> <img src="{{ $project->image }}" class="img-fluid" alt="">
+                                <div class="desc">
+                                    <div class="con">
+                                    <h3>{{ $project->name }}</h3> <span>{{ $project->description }}</span> </div>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                </a>
-            </div>
-            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                <a href="#" class="desc">
-                    <div class="project"> <img src="/frontend/images/portfolio/yes-logo.png" class="img-fluid" alt="">
-                        <div class="desc">
-                            <div class="con">
-                                <h3>Project 03</h3> <span>Web Design, Web Development</span> </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                <a href="#" class="desc">
-                    <div class="project"> <img src="/frontend/images/portfolio/elc-logo.jpeg" class="img-fluid" alt="">
-                        <div class="desc">
-                            <div class="con">
-                                <h3>Project 04</h3> <span>Web Design, Web Development</span> </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                <a href="#" class="desc">
-                    <div class="project"> <img src="/frontend/images/portfolio/hive-logo.png" class="img-fluid" alt="">
-                        <div class="desc">
-                            <div class="con">
-                                <h3>Project 05</h3> <span>Web Design, Web Development</span> </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                <a href="#" class="desc">
-                    <div class="project"> <img src="/frontend/images/portfolio/pgs-logo.jpg" class="img-fluid" alt="">
-                        <div class="desc">
-                            <div class="con">
-                                <h3>Project 06</h3> <span>Web Design, Web Development</span> </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                <a href="#" class="desc">
-                    <div class="project"> <img src="/frontend/images/portfolio/north-end-logo.jpeg" class="img-fluid" alt="">
-                        <div class="desc">
-                            <div class="con">
-                                <h3>Project 07</h3> <span>Web Design, Web Development</span> </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                <a href="#" class="desc">
-                    <div class="project"> <img src="/frontend/images/portfolio/nieoo-logo.png" class="img-fluid" alt="">
-                        <div class="desc">
-                            <div class="con">
-                                <h3>Project 08</h3> <span>Web Design, Web Development</span> </div>
-                        </div>
-                    </div>
-                </a>
+                @endforeach
             </div>
         </div>
     </div>
-</div>
+@endguest
+
+@auth
+    <div id="projects" class="techynaf-projects mb-4">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12"> <span class="heading-meta style-1">Take a Look at</span>
+                    <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">My Projects</h2> </div>
+            </div>
+            <div class="row">
+                @foreach ($projects as $project)
+                <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+                    <a href="#" class="desc">
+                        <div class="project"> <img src="{{ $project->image }}" class="img-fluid" alt="">
+                            <div class="desc">
+                                <div class="con">
+                                <h3>{{ $project->name }}</h3> <span>{{ $project->description }}</span> </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                @endforeach
+            </div>
+            <form class="col-10" method="post" action="{{ route('project.store') }} " enctype="multipart/form-data">
+                @csrf
+
+                <div class="form-group col-md-6">
+                    <label for="exampleInputEmail1"> Name</label>
+                    <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('name')}}">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="exampleInputEmail1">Description</label>
+                    <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3">{{old('description')}}</textarea>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="exampleFormControlFile1">Profile Picture</label>
+                    <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+@endauth

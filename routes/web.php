@@ -47,6 +47,12 @@ Route::middleware(['auth'])->group(function () {
 
     //profile
     Route::patch('/profile', 'ProfileController@update')->name('profile.update');
+
+    //project
+    Route::Post('/project', 'ProjectController@store')->name('project.store');
+    Route::delete('/project/{id}', 'ProjectController@destroy')->name('project.delete');
+    Route::get('/project/edit/{id}', 'ProjectController@edit')->name('project.edit');
+    Route::patch('/project/{id}', 'ProjectController@update')->name('project.update');
 });
 
 
