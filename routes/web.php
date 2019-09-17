@@ -53,6 +53,10 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/project/{id}', 'ProjectController@destroy')->name('project.delete');
     Route::get('/project/edit/{id}', 'ProjectController@edit')->name('project.edit');
     Route::patch('/project/{id}', 'ProjectController@update')->name('project.update');
+
+    //footer
+    Route::patch('/footer', 'FooterController@update')->name('footer.update');
+
 });
 
 
