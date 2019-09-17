@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Education;
 use App\Experience;
+use App\Footer;
 use App\Profile;
 use App\Project;
 use App\Skill;
@@ -20,6 +21,7 @@ class ShowController extends Controller
         $skills = Skill::all();
         $profile = Profile::find(1);
         $projects = Project::all();
-        return view('layouts.body', compact('experiences', 'educations', 'testimonials', 'skills','profile','projects'));
+        $footer = Footer::find(1);
+        return view('layouts.body', compact('experiences', 'educations', 'testimonials', 'skills','profile','projects','footer'));
     }
 }
