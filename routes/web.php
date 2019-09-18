@@ -57,8 +57,13 @@ Route::middleware(['auth'])->group(function () {
     //footer
     Route::patch('/footer', 'FooterController@update')->name('footer.update');
 
+    //contact
+    Route::patch('/contact', 'ContactController@update')->name('contact.update');
+
 });
 
+//contact
+Route::post('/contact-us', 'ContactController@mail')->name('contact.mail');
 
 Auth::routes();
 

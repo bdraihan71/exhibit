@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Contact;
 use App\Education;
 use App\Experience;
 use App\Footer;
@@ -22,6 +23,7 @@ class MainController extends Controller
         $profile = Profile::find(1);
         $projects = Project::all();
         $footer = Footer::find(1);
-        return view('layouts.body', compact('experiences','educations','testimonials','skills','profile','projects', 'footer'));
+        $contact = Contact::find(1);
+        return view('layouts.body', compact('experiences','educations','testimonials','skills','profile','projects', 'footer','contact'));
     }
 }

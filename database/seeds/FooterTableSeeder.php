@@ -14,6 +14,6 @@ class FooterTableSeeder extends Seeder
         DB::table('footers')->insert([
             'copyright' => '2019 Techynaf',
             'cv' => '/frontend/images/test.pdf'
-            ]);
+        ]);
     }
 }
