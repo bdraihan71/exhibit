@@ -35,33 +35,36 @@ class ProjectController extends Controller
 
     public function destroy($id)
     {
-        $education = Education::find($id);
+        $education = Project::find($id);
         $education->delete();
         return redirect('/edit');
     }
 
     public function edit($id)
     {
-        $education = Education::find($id);
-        return view('layouts.edit.education', compact('education'));
+        $project = Project::find($id);
+        return view('layouts.edit.project', compact('project'));
     }
 
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'start' => 'required',
-            'institution_name' => 'required|max:255',
-            'degree' => 'required|max:255',
+            'name' => 'required',
+            'image' => 'required',
             'description' => 'required|max:500',
         ]);
 
-        $education = Education::find($id);
-        $education->start = $request->get('start');
-        $education->end = $request->get('end');
-        $education->institution_name = $request->get('institution_name');
-        $education->degree = $request->get('degree');
-        $education->description = $request->get('description');
-        $education->save();
+        $project_url = $request->name . '-' .   '-profile-' .  time().'.'.request()->image->getClientOriginalExtension();
+
+        $project_location = '/images/project/';
+
+        request()->image->move(public_path('/images/project/'), $project_url);
+
+        $project = Project::find($id);
+        $project->name = $request->get('name');
+        $project->image = $project_location . $project_url;
+        $project->description = $request->get('description');
+        $project->save();
         return redirect('/edit');
     }
 }
