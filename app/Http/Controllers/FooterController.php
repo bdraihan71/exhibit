@@ -10,7 +10,6 @@ class FooterController extends Controller
     public function update(Request $request)
     {
         $this->validate($request, [
-            'copyright' => 'required|max:255',
             'cv' => "required|mimes:pdf|max:10000"
         ]);
 

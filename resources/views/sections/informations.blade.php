@@ -16,8 +16,8 @@
                                     <p><i class="ti-calendar"></i> <a href="#">{{ $profile->dob }}</a></p>
                                     <p><i class="ti-mobile"></i> <a href="#">{{ $profile->phone }}</a></p>
                                     <p><i class="ti-email"></i> <a href="#">{{ $profile->email }}</a></p>
-                                    <p><i class="ti-skype"></i> <a href="#">{{ $profile->skype }}</a></p>
-                                    <p><i class="ti-world"></i> <a target="_blank" href="#">{{ $profile->website }}</a></p>
+                                    <p><i class="ti-skype"></i> <a href="skype:{{ $profile->skype }}?call">{{ $profile->skype }}</a></p>
+                                    <p><i class="ti-world"></i> <a target="_blank" href="{{ $profile->website }}">{{ $profile->website }}</a></p>
                                 </div>
                                 <div class="col-md-6">
                                     <p><i class="ti-linkedin"></i> <a target="_blank" href="{{ 'https://www.linkedin.com/'.$profile->linkedin }}">{{ $profile->linkedin }}</a></p>
@@ -51,12 +51,12 @@
                                 <p><i class="ti-calendar"></i> <a href="#">{{ $profile->dob }}</a></p>
                                 <p><i class="ti-mobile"></i> <a href="#">{{ $profile->phone }}</a></p>
                                 <p><i class="ti-email"></i> <a href="#">{{ $profile->email }}</a></p>
-                                <p><i class="ti-skype"></i> <a href="#">{{ $profile->skype }}</a></p>
-                                <p><i class="ti-world"></i> <a target="_blank" href="#">{{ $profile->website }}</a></p>
+                                <p><i class="ti-skype"></i> <a href="skype:{{ $profile->skype }}?call">{{ $profile->skype }}</a></p>
+                                <p><i class="ti-world"></i> <a target="_blank" href="{{ $profile->website }}">{{ $profile->website }}</a></p>
                             </div>
                             <div class="col-md-6">
                                 <p><i class="ti-linkedin"></i> <a target="_blank" href="{{ 'https://www.linkedin.com/'.$profile->linkedin }}">{{ $profile->linkedin }}</a></p>
-                                <p><i class="ti-facebook"></i> <a target="_blank" target="_blank" href="{{ 'https://www.facebook.com/'. $profile->facebook }}">{{ $profile->facebook }}</a></p>
+                                <p><i class="ti-facebook"></i> <a target="_blank"  href="{{ 'https://www.facebook.com/'. $profile->facebook }}">{{ $profile->facebook }}</a></p>
                                 <p><i class="ti-twitter"></i> <a target="_blank" href="{{ 'https://twitter.com/'.$profile->twitter }}">{{ $profile->twitter }}</a></p>
                                 <p><i class="ti-youtube"></i> <a target="_blank" href="{{ 'https://www.youtube.com/'.$profile->youtube }}">{{ $profile->youtube }}</a></p>
                             <p><i class="ti-instagram"></i> <a target="_blank" href="{{ 'http://instagram.com/'.$profile->instagram }}">{{ $profile->instagram }}</a></p>
