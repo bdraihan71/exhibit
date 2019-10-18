@@ -22,11 +22,11 @@
     <!-- Sidebar Footer -->
     <div class="techynaf-footer">
         <ul>
-            <li><a href="mailto:{{ $profile->email }}"><i class="ti-email font-14px gray-icon"></i></a></li>
-            <li><a href="https://linkedin.com/{{ $profile->linkedin }}"><i class="ti-linkedin font-14px gray-icon"></i></a></li>
-            <li><a href="http://facebook.com/{{ $profile->facebook }}"><i class="ti-facebook font-14px gray-icon"></i></a></li>
-            <li><a href="https://www.instagram.com/{{ $profile->instagram }}"><i class="ti-instagram font-14px gray-icon"></i></a></li>
+            <li><a target="_blank" href="mailto:{{ $profile->email }}"><i class="ti-email font-14px gray-icon"></i></a></li>
+            <li><a target="_blank" href="https://linkedin.com/{{ $profile->linkedin }}"><i class="ti-linkedin font-14px gray-icon"></i></a></li>
+            <li><a target="_blank" href="http://facebook.com/{{ $profile->facebook }}"><i class="ti-facebook font-14px gray-icon"></i></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/{{ $profile->instagram }}"><i class="ti-instagram font-14px gray-icon"></i></a></li>
         </ul>
-        <p><small>&copy; 2019 <a href="#">Techynaf</a></small></p>
+        <p><small>&copy; <a target="_blank" href="https://techynaf.com/">Techynaf</a></small></p>
     </div>
 </aside>
