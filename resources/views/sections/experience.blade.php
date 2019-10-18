@@ -4,7 +4,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12"> <span class="heading-meta style-1">Resume</span>
-                    <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">Experience</h2> </div>
+                    <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">Experience</h2>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-12 animate-box text-justify" data-animate-effect="fadeInLeft">
@@ -29,7 +30,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12"> <span class="heading-meta style-1">Resume</span>
-                    <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">Experience</h2> </div>
+                    <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">Experience</h2>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-12 animate-box text-justify" data-animate-effect="fadeInLeft">

@@ -42,6 +42,14 @@
                             </div>
                         </div>
                     </a>
+                    <div>
+                        <a href="{{ route('project.edit', $project->id)}}" class="btn btn-primary">Edit</a>
+                        <form action="{{ route('project.delete', $project->id)}}" onclick="return confirm('Are you sure, you want to delete ?')" method="post" style="display: inline;">
+                            @csrf
+                            @method('delete')
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
                 </div>
                 @endforeach
             </div>

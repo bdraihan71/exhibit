@@ -15,8 +15,8 @@ class CreateFootersTable extends Migration
     {
         Schema::create('footers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('copyright');
-            $table->string('cv');
+            $table->string('copyright')->nullable();
+            $table->string('cv')->nullable();
             $table->timestamps();
         });
     }
