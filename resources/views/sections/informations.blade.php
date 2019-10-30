@@ -13,18 +13,38 @@
                             <div class="divider1"></div>
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p><i class="ti-calendar"></i> <a href="#">{{ $profile->dob }}</a></p>
-                                    <p><i class="ti-mobile"></i> <a href="#">{{ $profile->phone }}</a></p>
-                                    <p><i class="ti-email"></i> <a href="#">{{ $profile->email }}</a></p>
-                                    <p><i class="ti-skype"></i> <a href="skype:{{ $profile->skype }}?call">{{ $profile->skype }}</a></p>
-                                    <p><i class="ti-world"></i> <a target="_blank" href="{{ $profile->website }}">{{ $profile->website }}</a></p>
+                                    @if ($profile->dob)
+                                        <p><i class="ti-calendar"></i> <a href="#">{{ $profile->dob }}</a></p>
+                                    @endif
+                                    @if ($profile->phone)
+                                        <p><i class="ti-mobile"></i> <a href="#">{{ $profile->phone }}</a></p>
+                                    @endif
+                                    @if ($profile->email)
+                                        <p><i class="ti-email"></i> <a href="#">{{ $profile->email }}</a></p>
+                                    @endif
+                                    @if ($profile->skype)
+                                        <p><i class="ti-skype"></i> <a href="skype:{{ $profile->skype }}?call">{{ $profile->skype }}</a></p>
+                                    @endif
+                                    @if ($profile->website)
+                                        <p><i class="ti-world"></i> <a target="_blank" href="{{ $profile->website }}">{{ $profile->website }}</a></p>
+                                    @endif
                                 </div>
                                 <div class="col-md-6">
-                                    <p><i class="ti-linkedin"></i> <a target="_blank" href="{{ 'https://www.linkedin.com/'.$profile->linkedin }}">{{ $profile->linkedin }}</a></p>
-                                <p><i class="ti-facebook"></i> <a target="_blank" href="{{ 'https://www.facebook.com/'. $profile->facebook }}">{{ $profile->facebook }}</a></p>
-                                    <p><i class="ti-twitter"></i> <a target="_blank" href="{{ 'https://twitter.com/'.$profile->twitter }}">{{ $profile->twitter }}</a></p>
-                                    <p><i class="ti-youtube"></i> <a target="_blank" href="{{ 'https://www.youtube.com/'.$profile->youtube }}">{{ $profile->youtube }}</a></p>
-                                    <p><i class="ti-instagram"></i> <a target="_blank" href="{{ 'http://instagram.com/'.$profile->instagram }}">{{ $profile->instagram }}</a></p>
+                                    @if ($profile->linkedin)
+                                        <p><i class="ti-linkedin"></i> <a target="_blank" href="{{ 'https://www.linkedin.com/'.$profile->linkedin }}">{{ $profile->linkedin }}</a></p>
+                                    @endif
+                                    @if ($profile->facebook)
+                                        <p><i class="ti-facebook"></i> <a target="_blank" href="{{ 'https://www.facebook.com/'. $profile->facebook }}">{{ $profile->facebook }}</a></p>
+                                    @endif
+                                    @if ($profile->twitter)
+                                        <p><i class="ti-twitter"></i> <a target="_blank" href="{{ 'https://twitter.com/'.$profile->twitter }}">{{ $profile->twitter }}</a></p>
+                                    @endif
+                                    @if ($profile->youtube)
+                                        <p><i class="ti-youtube"></i> <a target="_blank" href="{{ 'https://www.youtube.com/'.$profile->youtube }}">{{ $profile->youtube }}</a></p>
+                                    @endif
+                                    @if ($profile->instagram)
+                                        <p><i class="ti-instagram"></i> <a target="_blank" href="{{ 'http://instagram.com/'.$profile->instagram }}">{{ $profile->instagram }}</a></p>
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -48,18 +68,38 @@
                         <div class="divider1"></div>
                         <div class="row">
                             <div class="col-md-6">
-                                <p><i class="ti-calendar"></i> <a href="#">{{ $profile->dob }}</a></p>
-                                <p><i class="ti-mobile"></i> <a href="#">{{ $profile->phone }}</a></p>
-                                <p><i class="ti-email"></i> <a href="#">{{ $profile->email }}</a></p>
-                                <p><i class="ti-skype"></i> <a href="skype:{{ $profile->skype }}?call">{{ $profile->skype }}</a></p>
-                                <p><i class="ti-world"></i> <a target="_blank" href="{{ $profile->website }}">{{ $profile->website }}</a></p>
+                                @if ($profile->dob)
+                                    <p><i class="ti-calendar"></i> <a href="#">{{ $profile->dob }}</a></p>
+                                @endif
+                                @if ($profile->phone)
+                                    <p><i class="ti-mobile"></i> <a href="#">{{ $profile->phone }}</a></p>
+                                @endif
+                                @if ($profile->email)
+                                    <p><i class="ti-email"></i> <a href="#">{{ $profile->email }}</a></p>
+                                @endif
+                                @if ($profile->skype)
+                                    <p><i class="ti-skype"></i> <a href="skype:{{ $profile->skype }}?call">{{ $profile->skype }}</a></p>
+                                @endif
+                                @if ($profile->website)
+                                    <p><i class="ti-world"></i> <a target="_blank" href="{{ $profile->website }}">{{ $profile->website }}</a></p>
+                                @endif
                             </div>
                             <div class="col-md-6">
-                                <p><i class="ti-linkedin"></i> <a target="_blank" href="{{ 'https://www.linkedin.com/'.$profile->linkedin }}">{{ $profile->linkedin }}</a></p>
-                                <p><i class="ti-facebook"></i> <a target="_blank"  href="{{ 'https://www.facebook.com/'. $profile->facebook }}">{{ $profile->facebook }}</a></p>
-                                <p><i class="ti-twitter"></i> <a target="_blank" href="{{ 'https://twitter.com/'.$profile->twitter }}">{{ $profile->twitter }}</a></p>
-                                <p><i class="ti-youtube"></i> <a target="_blank" href="{{ 'https://www.youtube.com/'.$profile->youtube }}">{{ $profile->youtube }}</a></p>
-                            <p><i class="ti-instagram"></i> <a target="_blank" href="{{ 'http://instagram.com/'.$profile->instagram }}">{{ $profile->instagram }}</a></p>
+                                @if ($profile->linkedin)
+                                    <p><i class="ti-linkedin"></i> <a target="_blank" href="{{ 'https://www.linkedin.com/'.$profile->linkedin }}">{{ $profile->linkedin }}</a></p>
+                                @endif
+                                @if ($profile->facebook)
+                                    <p><i class="ti-facebook"></i> <a target="_blank" href="{{ 'https://www.facebook.com/'. $profile->facebook }}">{{ $profile->facebook }}</a></p>
+                                @endif
+                                @if ($profile->twitter)
+                                    <p><i class="ti-twitter"></i> <a target="_blank" href="{{ 'https://twitter.com/'.$profile->twitter }}">{{ $profile->twitter }}</a></p>
+                                @endif
+                                @if ($profile->youtube)
+                                    <p><i class="ti-youtube"></i> <a target="_blank" href="{{ 'https://www.youtube.com/'.$profile->youtube }}">{{ $profile->youtube }}</a></p>
+                                @endif
+                                @if ($profile->instagram)
+                                    <p><i class="ti-instagram"></i> <a target="_blank" href="{{ 'http://instagram.com/'.$profile->instagram }}">{{ $profile->instagram }}</a></p>
+                                @endif
                             </div>
                         </div>
                     </div>

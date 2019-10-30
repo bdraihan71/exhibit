@@ -11,17 +11,6 @@ class ProfileController extends Controller
     {
         $this->validate($request, [
             'name' => 'required|max:255',
-            'designation' => 'required|max:255',
-            'dob' => 'required',
-            'phone' => 'required|max:255',
-            'email' => 'required|max:255',
-            'skype' => 'required|max:255',
-            'website' => 'required|max:255',
-            'linkedin' => 'required|max:255',
-            'facebook' => 'required|max:255',
-            'twitter' => 'required|max:255',
-            'youtube' => 'required|max:255',
-            'instagram' => 'required|max:255',
         ]);
 
         if($request->hasFile('image')){
