@@ -31,7 +31,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     @if ($profile->linkedin)
-                                        <p><i class="ti-linkedin"></i> <a target="_blank" href="{{ 'https://www.linkedin.com/'.$profile->linkedin }}">{{ $profile->linkedin }}</a></p>
+                                        <p><i class="ti-linkedin"></i> <a target="_blank" href="{{ 'https://www.linkedin.com/in/'.$profile->linkedin }}">{{ $profile->linkedin }}</a></p>
                                     @endif
                                     @if ($profile->facebook)
                                         <p><i class="ti-facebook"></i> <a target="_blank" href="{{ 'https://www.facebook.com/'. $profile->facebook }}">{{ $profile->facebook }}</a></p>
@@ -86,7 +86,7 @@
                             </div>
                             <div class="col-md-6">
                                 @if ($profile->linkedin)
-                                    <p><i class="ti-linkedin"></i> <a target="_blank" href="{{ 'https://www.linkedin.com/'.$profile->linkedin }}">{{ $profile->linkedin }}</a></p>
+                                    <p><i class="ti-linkedin"></i> <a target="_blank" href="{{ 'https://www.linkedin.com/in/'.$profile->linkedin }}">{{ $profile->linkedin }}</a></p>
                                 @endif
                                 @if ($profile->facebook)
                                     <p><i class="ti-facebook"></i> <a target="_blank" href="{{ 'https://www.facebook.com/'. $profile->facebook }}">{{ $profile->facebook }}</a></p>
