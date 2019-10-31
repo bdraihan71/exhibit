@@ -9,7 +9,7 @@
             <div class="row">
                 @foreach ($testimonials as $testimonial)
                     <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                        <div class="techynaf-quote-card"> <img src="images/quote.png" alt="" class="techynaf-quote-2">
+                        <div class="techynaf-quote-card"> <img src="frontend/images/quote.png" alt="" class="techynaf-quote-2">
                             <p>{{ $testimonial->description }}</p>
                             <h5>{{ $testimonial->name }}</h5>
                             <p class="occupation">{{ $testimonial->designation }}, {{ $testimonial->company }}</p>
