@@ -3,7 +3,7 @@
     <div id="testimonial" class="techynaf-testiominal mb-4">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12"> <span class="heading-meta style-1">Say About Us</span>
+                <div class="col-md-12"> <span class="heading-meta style-1">Say About Me</span>
                     <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">Testimonials</h2> </div>
             </div>
             <div class="row">
@@ -25,7 +25,7 @@
     <div id="testimonial" class="techynaf-testiominal mb-4">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12"> <span class="heading-meta style-1">Say About Us</span>
+                <div class="col-md-12"> <span class="heading-meta style-1">Say About Me</span>
                     <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">Testimonials</h2> </div>
             </div>
             <div class="row">
@@ -64,7 +64,7 @@
                     </div>
 
                     <div class="form-group col-md-6">
-                        <label for="exampleInputEmail1">Description</label>
+                        <label for="exampleInputEmail1">Comment</label>
                         <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3">{{old('description')}}</textarea>
                     </div>
 
