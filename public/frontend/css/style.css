@@ -336,7 +336,7 @@ input[type="checkbox"] {
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .2), 0 13px 24px -11px rgba(3, 36, 129, .6);
 } */
 
-#techynaf-aside #techynaf-logo .circular { /* need to give parent container equal width and height*/
+#techynaf-aside #techynaf-logo .circular {
     margin: auto;
     width: 150px;
     height: 150px;
@@ -344,6 +344,8 @@ input[type="checkbox"] {
     -moz-border-radius: 50%;
     border-radius: 50%;
     overflow: hidden;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .2), 0 13px 24px -11px rgba(3, 36, 129, .6);
 }
 #techynaf-aside #techynaf-logo .circular img{
     width:100%;
