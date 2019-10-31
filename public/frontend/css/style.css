@@ -2091,3 +2091,7 @@ padding-top: 12px;
     opacity: 1;
     visibility: visible;
   }
+
+  .auth-delete-btn {
+      margin-bottom: 10px;
+  }
