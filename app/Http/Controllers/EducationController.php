@@ -13,7 +13,7 @@ class EducationController extends Controller
             'start' => 'required',
             'institution_name' => 'required|max:255',
             'degree' => 'required|max:255',
-            'description' => 'required|max:500',
+            'description' => 'max:500',
         ]);
 
         $education = new Education([

@@ -19,7 +19,7 @@ class CreateEducationTable extends Migration
             $table->date('end')->nullable();
             $table->string('institution_name');
             $table->string('degree');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
