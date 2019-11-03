@@ -65,6 +65,6 @@ Route::middleware(['auth'])->group(function () {
 //contact
 Route::post('/contact-us', 'ContactController@mail')->name('contact.mail');
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
