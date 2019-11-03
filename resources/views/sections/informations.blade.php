@@ -81,7 +81,7 @@
                                     <p><i class="ti-skype"></i> <a href="skype:{{ $profile->skype }}?call">{{ $profile->skype }}</a></p>
                                 @endif
                                 @if ($profile->website)
-                                    <p><i class="ti-world"></i> <a target="_blank" href="{{ $profile->website }}">{{ $profile->website }}</a></p>
+                                    <p><i class="ti-world"></i> <a target="_blank" href="{{'https://www.'. $profile->website }}">{{ $profile->website }}</a></p>
                                 @endif
                             </div>
                             <div class="col-md-6">
