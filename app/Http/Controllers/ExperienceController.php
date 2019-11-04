@@ -25,14 +25,14 @@ class ExperienceController extends Controller
         ]);
 
         $experience->save();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'successfully store your experience!');
     }
 
     public function destroy($id)
     {
         $experience = Experience::find($id);
         $experience->delete();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'successfully delete your experience!');
     }
 
     public function edit($id)
@@ -57,6 +57,6 @@ class ExperienceController extends Controller
         $experience->designation = $request->get('designation');
         $experience->description = $request->get('description');
         $experience->save();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'successfully update your experience!');
     }
 }

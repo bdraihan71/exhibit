@@ -22,10 +22,18 @@
     <!-- Sidebar Footer -->
     <div class="techynaf-footer">
         <ul>
-            <li><a target="_blank" href="mailto:{{ $profile->email }}"><i class="ti-email font-14px gray-icon"></i></a></li>
-            <li><a target="_blank" href="https://linkedin.com/{{ $profile->linkedin }}"><i class="ti-linkedin font-14px gray-icon"></i></a></li>
-            <li><a target="_blank" href="http://facebook.com/{{ $profile->facebook }}"><i class="ti-facebook font-14px gray-icon"></i></a></li>
-            <li><a target="_blank" href="https://www.instagram.com/{{ $profile->instagram }}"><i class="ti-instagram font-14px gray-icon"></i></a></li>
+            @if ($profile->email)
+                <li><a target="_blank" href="mailto:{{ $profile->email }}"><i class="ti-email font-14px gray-icon"></i></a></li>
+            @endif
+            @if ($profile->linkedin)
+                <li><a target="_blank" href="https://linkedin.com/{{ $profile->linkedin }}"><i class="ti-linkedin font-14px gray-icon"></i></a></li>
+            @endif
+            @if ($profile->facebook)
+                <li><a target="_blank" href="http://facebook.com/{{ $profile->facebook }}"><i class="ti-facebook font-14px gray-icon"></i></a></li>
+            @endif
+            @if ($profile->instagram)
+                <li><a target="_blank" href="https://www.instagram.com/{{ $profile->instagram }}"><i class="ti-instagram font-14px gray-icon"></i></a></li>
+            @endif
         </ul>
         <p><small>&copy; <a target="_blank" href="https://techynaf.com/">Techynaf</a></small></p>
     </div>

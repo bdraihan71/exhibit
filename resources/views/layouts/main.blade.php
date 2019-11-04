@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/frontend/css/style.css">
 </head>
 
-<body>
+
 
     @include('sections.backtotop')
 
