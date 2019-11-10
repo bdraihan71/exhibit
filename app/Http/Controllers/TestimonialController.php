@@ -25,14 +25,14 @@ class TestimonialController extends Controller
         ]);
 
         $testimonial->save();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'Your information has been successfully saved');
     }
 
     public function destroy($id)
     {
         $testimonial = Testimonial::find($id);
         $testimonial->delete();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'Your  information has been successfully deleted');
     }
 
     public function edit($id)
@@ -56,6 +56,6 @@ class TestimonialController extends Controller
         $testimonial->company = $request->get('company');
         $testimonial->description = $request->get('description');
         $testimonial->save();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'Your  information has been successfully updated');
     }
 }

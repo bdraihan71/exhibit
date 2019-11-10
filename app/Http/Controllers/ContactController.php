@@ -30,6 +30,6 @@ class ContactController extends Controller
         Mail::to([env('MY_MAIL')])
         ->cc([env('MY_MAIL')])
         ->queue(new ContactUs($name, $email, $body));
-        return Redirect()->back();
+        return Redirect()->back()->with('success', 'Your message successfully sent');
     }
 }

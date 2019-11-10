@@ -52,6 +52,6 @@ class ProfileController extends Controller
             $profile->instagram = $request->get('instagram');
         }
             $profile->save();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'Your personal information has been successfully updated');
     }
 }

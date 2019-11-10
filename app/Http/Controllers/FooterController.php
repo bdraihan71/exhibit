@@ -28,6 +28,6 @@ class FooterController extends Controller
                 $footer->copyright = $request->get('copyright');;
         }
             $footer->save();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'Your information has been successfully updated');
     }
 }

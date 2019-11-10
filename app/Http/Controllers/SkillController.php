@@ -21,14 +21,14 @@ class SkillController extends Controller
         ]);
 
         $skill->save();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'Your skill has been successfully saved');
     }
 
     public function destroy($id)
     {
         $skill = Skill::find($id);
         $skill->delete();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'Your skill  has been successfully deleted');
     }
 
     public function edit($id)
@@ -49,6 +49,6 @@ class SkillController extends Controller
         $skill->skill_value = $request->get('skill_value');
         $skill->description = $request->get('description');
         $skill->save();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'Your skill  has been successfully update');
     }
 }

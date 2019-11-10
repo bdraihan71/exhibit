@@ -25,14 +25,14 @@ class EducationController extends Controller
         ]);
 
         $education->save();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'Your educational information has been successfully saved');
     }
 
     public function destroy($id)
     {
         $education = Education::find($id);
         $education->delete();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'Your educational information has been successfully deleted');
     }
 
     public function edit($id)
@@ -57,6 +57,6 @@ class EducationController extends Controller
         $education->degree = $request->get('degree');
         $education->description = $request->get('description');
         $education->save();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'Your educational information has been successfully updated');
     }
 }

@@ -30,14 +30,14 @@ class ProjectController extends Controller
         ]);
 
         $project->save();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'Your project has been successfully saved');
     }
 
     public function destroy($id)
     {
         $education = Project::find($id);
         $education->delete();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'Your project has been successfully deleted');
     }
 
     public function edit($id)
@@ -65,6 +65,6 @@ class ProjectController extends Controller
         $project->image = $project_location . $project_url;
         $project->description = $request->get('description');
         $project->save();
-        return redirect('/edit');
+        return redirect('/edit')->with('success', 'Your project has been successfully updated');
     }
 }
