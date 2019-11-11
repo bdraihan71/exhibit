@@ -16,6 +16,10 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#testimonial">Testimonial</a></li>
             <li><a href="#contact">Contact</a></li>
+            @if (Auth::check())
+                <li><a href="">password</a></li>
+                <li><a href="{{route('logout')}}">logout</a></li>
+            @endif
         </ul>
     </nav>
     <a class="btn btn-info w-100" href="{{$footer->cv}}" download="{{$footer->cv}}">Download CV</a>

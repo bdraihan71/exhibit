@@ -60,6 +60,11 @@ Route::middleware(['auth'])->group(function () {
     //contact
     Route::patch('/contact', 'ContactController@update')->name('contact.update');
 
+    //Password
+    Route::get('/password', 'ProfileController@getPassword')->name('password.get');
+    Route::patch('/password', 'ProfileController@newUpdatePassword')->name('password.newpassword');
+
+
 });
 
 //contact
