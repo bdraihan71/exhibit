@@ -17,7 +17,8 @@
             <li><a href="#testimonial">Testimonial</a></li>
             <li><a href="#contact">Contact</a></li>
             @if (Auth::check())
-                <li><a href="">password</a></li>
+                <li><a href="{{route('contact.showall')}}">Mail</a></li>
+                <li><a href="{{route('password.get')}}">password</a></li>
                 <li><a href="{{route('logout')}}">logout</a></li>
             @endif
         </ul>

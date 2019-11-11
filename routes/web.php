@@ -64,6 +64,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/password', 'ProfileController@getPassword')->name('password.get');
     Route::patch('/password', 'ProfileController@newUpdatePassword')->name('password.newpassword');
 
+    //contact
+    Route::get('/mail', 'ContactController@showAll')->name('contact.showall');
+
 
 });
 
