@@ -47,17 +47,17 @@
                     </ul>
                 </div>
                 <div class="col-md-12 animate-box text-center" data-animate-effect="fadeInLeft">
-                    <p class="techynaf-lead">&copy; <a target="_blank" href="https://techynaf.com/">{{ $footer->copyright }}</a></p>
+                    <p class="techynaf-lead">&copy; <a target="_blank" href="https://techynaf.com/">Techynaf</a></p>
                 </div>
             </div>
             <form class="col-10" method="post" action="{{ route('footer.update') }} " enctype="multipart/form-data">
                 @csrf
                 @method('patch')
 
-                <div class="form-group col-md-6">
+                {{-- <div class="form-group col-md-6">
                     <label for="exampleInputEmail1"> Copyright Text</label>
                     <input type="text" name="copyright" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('copyright')}}">
-                </div>
+                </div> --}}
 
                 <div class="form-group col-md-6">
                     <label for="exampleFormControlFile1">Upload CV</label>

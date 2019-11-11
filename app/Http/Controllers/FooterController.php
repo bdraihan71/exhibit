@@ -21,11 +21,7 @@ class FooterController extends Controller
             request()->cv->move(public_path('/images/'), $profile_url);
 
             $footer = Footer::find(1);
-                $footer->copyright = $request->get('copyright');
                 $footer->cv = $profile_location . $profile_url;
-        }else{
-            $footer = Footer::find(1);
-                $footer->copyright = $request->get('copyright');;
         }
             $footer->save();
         return redirect('/edit')->with('success', 'Your information has been successfully updated');
