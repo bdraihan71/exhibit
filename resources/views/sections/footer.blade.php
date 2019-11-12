@@ -9,7 +9,7 @@
             <div class="col-md-12 animate-box text-center mt-4" data-animate-effect="fadeInLeft">
                 <ul class="social-network">
                     <li><a href="#"><i class="ti-email font-25px mx-2"></i></a></li>
-                    <li><a target="_blank" href="{{ 'https://www.linkedin.com/'.$profile->linkedin }}"><i class="ti-linkedin font-25px mx-2"></i></a></li>
+                    <li><a target="_blank" href="{{ 'https://www.linkedin.com/in/'.$profile->linkedin }}"><i class="ti-linkedin font-25px mx-2"></i></a></li>
                     <li><a target="_blank" href="{{ 'https://www.facebook.com/'. $profile->facebook }}"><i class="ti-facebook font-25px mx-2"></i></a></li>
                     <li><a target="_blank" href="{{ 'https://twitter.com/'.$profile->twitter }}"><i class="ti-twitter-alt font-25px mx-2"></i></a></li>
                     <li><a target="_blank" href="{{ 'http://instagram.com/'.$profile->instagram }}"><i class="ti-instagram font-25px mx-2"></i></a></li>

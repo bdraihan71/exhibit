@@ -327,13 +327,28 @@ input[type="checkbox"] {
     width: 100%;
 }
 
-#techynaf-aside #techynaf-logo img {
+/* #techynaf-aside #techynaf-logo img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     margin-bottom: 20px;
     border: 1px solid transparent;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .2), 0 13px 24px -11px rgba(3, 36, 129, .6);
+} */
+
+#techynaf-aside #techynaf-logo .circular {
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .2), 0 13px 24px -11px rgba(3, 36, 129, .6);
+}
+#techynaf-aside #techynaf-logo .circular img{
+    width:100%;
 }
 
 #techynaf-logo-footer {
@@ -1953,7 +1968,7 @@ ul.social-network li {
 
 .techynaf-quote-card {
     padding: 60px 40px;
-    background-color: #f6f6f6;
+    background: linear-gradient(169deg, rgba(39,182,165,0.8) 0%, rgba(30,53,103,0.1) 87%);
     text-align: justify;
     border-radius: 8px;
     margin-bottom: 30px;
@@ -2075,4 +2090,8 @@ padding-top: 12px;
   #backtotopbutton.show {
     opacity: 1;
     visibility: visible;
+  }
+
+  .auth-delete-btn {
+      margin-bottom: 10px;
   }

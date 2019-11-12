@@ -48,7 +48,7 @@
                                 <form action="{{ route('education.delete', $education->id)}}" onclick="return confirm('Are you sure, you want to delete ?')" method="post" style="display: inline;">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                    <button type="submit" class="btn btn-danger auth-delete-btn">Delete</button>
                                 </form>
                             </li>
 

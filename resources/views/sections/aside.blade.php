@@ -3,7 +3,10 @@
 <aside id="techynaf-aside">
     <!-- Logo -->
     <h1 id="techynaf-logo">
-        <img src="{{ url($profile->image) }}" alt=""><br />
+        <div class="circular">
+            <img src="{{ url($profile->image) }}" alt="">
+        </div>
+        <br />
         <a href="#introduction">{{ $profile->name }}<span>{{ $profile->designation }}</span></a>
     </h1>
     <!-- Menu -->
