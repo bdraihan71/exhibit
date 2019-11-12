@@ -16,7 +16,7 @@
                 </ul>
             </div>
             <div class="col-md-12 animate-box text-center" data-animate-effect="fadeInLeft">
-            <p class="techynaf-lead">&copy; <a target="_blank" href="https://techynaf.com/">{{ $footer->copyright }}</a></p>
+            <p class="techynaf-lead">&copy; <a target="_blank" href="https://techynaf.com/">Techynaf</a></p>
             </div>
         </div>
     </div>
