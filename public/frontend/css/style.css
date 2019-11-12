@@ -1611,7 +1611,7 @@ ul.social-network li {
     cursor: pointer;
     opacity: 1;
     visibility: hidden;
-    padding: 12px 13px;
+    padding: 25px 15px 18px 15px;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
