@@ -59,10 +59,10 @@
                     <input type="text" name="copyright" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('copyright')}}">
                 </div> --}}
 
-                <div class="form-group col-md-6">
+                {{-- <div class="form-group col-md-6">
                     <label for="exampleFormControlFile1">Upload CV</label>
                     <input type="file" name="cv" class="form-control-file" id="exampleFormControlFile1">
-                </div>
+                </div> --}}
 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>

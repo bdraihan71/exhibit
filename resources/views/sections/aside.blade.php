@@ -26,7 +26,7 @@
             @endif
         </ul>
     </nav>
-    <a class="btn btn-info w-100" href="{{$footer->cv}}" download="{{$footer->cv}}">Download CV</a>
+    {{-- <a class="btn btn-info w-100" href="{{$footer->cv}}" download="{{$footer->cv}}">Download CV</a> --}}
     <!-- Sidebar Footer -->
     <div class="techynaf-footer">
         <ul>
