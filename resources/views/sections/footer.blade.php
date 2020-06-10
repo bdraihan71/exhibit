@@ -3,9 +3,9 @@
 <div id="techynaf-footer2">
     <div class="techynaf-narrow-content">
         <div class="row">
-            <div class="col-md-12 animate-box text-center mt-4" data-animate-effect="fadeInLeft">
+            {{-- <div class="col-md-12 animate-box text-center mt-4" data-animate-effect="fadeInLeft">
             <a class="btn btn-info" href="{{$footer->cv}}" download="{{$footer->cv}}">Download CV</a>
-            </div>
+            </div> --}}
             <div class="col-md-12 animate-box text-center mt-4" data-animate-effect="fadeInLeft">
                 <ul class="social-network">
                     <li><a href="#"><i class="ti-email font-25px mx-2"></i></a></li>
@@ -26,9 +26,9 @@
     <div id="techynaf-footer2">
         <div class="techynaf-narrow-content">
             <div class="row">
-                <div class="col-md-12 animate-box text-center mt-4" data-animate-effect="fadeInLeft">
+                {{-- <div class="col-md-12 animate-box text-center mt-4" data-animate-effect="fadeInLeft">
                     <a class="btn btn-info" href="{{$footer->cv}}" download="{{$footer->cv}}">Download CV</a>
-                </div>
+                </div> --}}
                 <div class="col-md-12 animate-box text-center mt-4" data-animate-effect="fadeInLeft">
                     <ul class="social-network">
                         <li><a href="#"><i class="ti-email font-25px mx-2"></i></a></li>
@@ -59,10 +59,10 @@
                     <input type="text" name="copyright" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{old('copyright')}}">
                 </div> --}}
 
-                {{-- <div class="form-group col-md-6">
+                <div class="form-group col-md-6">
                     <label for="exampleFormControlFile1">Upload CV</label>
                     <input type="file" name="cv" class="form-control-file" id="exampleFormControlFile1">
-                </div> --}}
+                </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
