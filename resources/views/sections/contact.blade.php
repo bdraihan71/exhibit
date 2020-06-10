@@ -16,7 +16,7 @@
                     <p>Address: {{$contact->address}}</p>
                 </div>
                 <!-- Contact Form -->
-                {{-- <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
+                <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
                     <h3 class="techynaf-about-heading">How Can I Help You?</h3>
                     <p>I would like to hear from you</p>
                     <form method="post" class="row" action="{{ route('contact.mail') }}">
@@ -39,7 +39,7 @@
                                 <input type="submit" class="btn btn-contact border-0" value="Say Hello!"> </div>
                         </div>
                     </form>
-                </div> --}}
+                </div>
             </div>
         </div>
     </div>
