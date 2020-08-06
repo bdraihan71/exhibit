@@ -16,7 +16,8 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#books">Books</a></li>
+            <li><a href="#videos">Videos</a></li>
             <li><a href="#testimonial">Testimonial</a></li>
             <li><a href="#contact">Contact</a></li>
             @if (Auth::check())
@@ -43,6 +44,6 @@
                 <li><a target="_blank" href="https://www.instagram.com/{{ $profile->instagram }}"><i class="ti-instagram font-14px gray-icon"></i></a></li>
             @endif
         </ul>
-        <p><small>&copy; <a target="_blank" href="https://techynaf.com/">Techynaf</a></small></p>
+        <p><small>&copy; <a target="_blank" href="https://techynaf.com/">TECHYNAF TECHNOLOGIES LIMITED</a></small></p>
     </div>
 </aside>

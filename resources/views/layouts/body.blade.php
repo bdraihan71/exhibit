@@ -30,6 +30,8 @@
 
     @include('sections.projects')
 
+    @include('sections.videos')
+
     @include('sections.testimonials')
 
     @include('sections.contact')

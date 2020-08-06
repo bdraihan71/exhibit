@@ -16,7 +16,7 @@
                 </ul>
             </div>
             <div class="col-md-12 animate-box text-center" data-animate-effect="fadeInLeft">
-            <p class="techynaf-lead">&copy; <a target="_blank" href="https://techynaf.com/">Techynaf</a></p>
+            <p class="techynaf-lead">&copy; <a target="_blank" href="https://techynaf.com/">TECHYNAF TECHNOLOGIES LIMITED</a></p>
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@
                     </ul>
                 </div>
                 <div class="col-md-12 animate-box text-center" data-animate-effect="fadeInLeft">
-                    <p class="techynaf-lead">&copy; <a target="_blank" href="https://techynaf.com/">Techynaf</a></p>
+                    <p class="techynaf-lead">&copy; <a target="_blank" href="https://techynaf.com/">TECHYNAF TECHNOLOGIES LIMITED</a></p>
                 </div>
             </div>
             <form class="col-10" method="post" action="{{ route('footer.update') }} " enctype="multipart/form-data">

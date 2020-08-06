@@ -1,10 +1,10 @@
 @guest
     <!-- Projects -->
-    <div id="projects" class="techynaf-projects mb-4">
+    <div id="books" class="techynaf-projects mb-4">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12"> <span class="heading-meta style-1">Take a Look at</span>
-                    <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">My Projects</h2> </div>
+                    <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">My Books</h2> </div>
             </div>
             <div class="row">
                 @foreach ($projects as $project)
@@ -25,11 +25,11 @@
 @endguest
 
 @auth
-    <div id="projects" class="techynaf-projects mb-4">
+    <div id="books" class="techynaf-projects mb-4">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12"> <span class="heading-meta style-1">Take a Look at</span>
-                    <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">My Projects</h2> </div>
+                    <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">My Books</h2> </div>
             </div>
             <div class="row">
                 @foreach ($projects as $project)

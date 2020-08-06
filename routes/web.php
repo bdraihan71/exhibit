@@ -68,6 +68,15 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/mail', 'ContactController@showAll')->name('contact.showall');
 
 
+    //Media Routes
+    Route::get('/media', 'VideoController@index');
+    Route::get('/media/video/add', 'VideoController@addVideo');
+    Route::post('/media/video/add', 'VideoController@storeVideo');
+    Route::get('/media/video/edit', 'VideoController@editVideo')->name('video-manager');
+    Route::post('/media/video/edit', 'VideoController@updateVideo');
+    Route::get('/media/video/delete/{id}', 'VideoController@deleteVideo');
+
+
 });
 
 //contact

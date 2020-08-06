@@ -8,6 +8,7 @@ use App\Experience;
 use App\Footer;
 use App\Profile;
 use App\Project;
+use App\Video;
 use App\Skill;
 use App\Testimonial;
 use Illuminate\Http\Request;
@@ -22,8 +23,9 @@ class MainController extends Controller
         $skills = Skill::all();
         $profile = Profile::find(1);
         $projects = Project::all();
+        $videos = Video::all();
         $footer = Footer::find(1);
         $contact = Contact::find(1);
-        return view('layouts.body', compact('experiences','educations','testimonials','skills','profile','projects', 'footer','contact'));
+        return view('layouts.body', compact('experiences','educations','testimonials','skills','profile','projects', 'videos', 'footer','contact'));
     }
 }
