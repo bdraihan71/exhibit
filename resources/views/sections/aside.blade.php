@@ -16,7 +16,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href="#photography">Photography</a></li>
             <li><a href="#testimonial">Testimonial</a></li>
             <li><a href="#contact">Contact</a></li>
             @if (Auth::check())

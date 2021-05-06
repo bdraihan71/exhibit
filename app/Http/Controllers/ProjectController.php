@@ -13,7 +13,7 @@ class ProjectController extends Controller
 
         $this->validate($request, [
             'name' => 'required',
-            'image' => 'required',
+            'image' => 'required|mimes:jpeg,bmp,png',
             'description' => 'required|max:500',
         ]);
 
@@ -30,7 +30,7 @@ class ProjectController extends Controller
         ]);
 
         $project->save();
-        return redirect('/edit')->with('success', 'Your project has been successfully saved');
+        return redirect('/edit')->with('success', 'Your photography has been successfully saved');
     }
 
     public function destroy($id)
@@ -65,6 +65,6 @@ class ProjectController extends Controller
         $project->image = $project_location . $project_url;
         $project->description = $request->get('description');
         $project->save();
-        return redirect('/edit')->with('success', 'Your project has been successfully updated');
+        return redirect('/edit')->with('success', 'Your photography has been successfully updated');
     }
 }
