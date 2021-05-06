@@ -28,6 +28,10 @@
 
     @include('sections.skills')
 
+
+    @include('sections.articles')
+
+
     @include('sections.projects')
 
     @include('sections.testimonials')
