@@ -11,7 +11,7 @@ use App\Project;
 use App\Skill;
 use App\Testimonial;
 use Illuminate\Http\Request;
-
+use App\Category;
 class MainController extends Controller
 {
     public function index()
@@ -24,6 +24,8 @@ class MainController extends Controller
         $projects = Project::all();
         $footer = Footer::find(1);
         $contact = Contact::find(1);
-        return view('layouts.body', compact('experiences','educations','testimonials','skills','profile','projects', 'footer','contact'));
+        $cats = Category::orderBy('name')->get();
+        $articles = Article::last(4)->get();
+        return view('layouts.body', compact('experiences','educations','testimonials','skills','profile','projects', 'footer','contact', 'cats', 'articles'));
     }
 }

@@ -1,26 +1,38 @@
 @guest
-<!-- Testiominals -->
+<!-- Articles -->
     <div id="articles" class="techynaf-testiominal mb-4">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12"> <span class="heading-meta style-1">Say About Me</span>
-                    <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">Testimonials</h2> </div>
+                    <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">Articles</h2> </div>
+
+                    @foreach($cats as $category)
+                        <a class="btn btn-primary" href="{{route('article.index', ['category_id'=>$category->id])}}">{{ $category->name }}</a>
+                    @endforeach
+                    
+                    @if($selected_category)
+                    <p>{{$selected_category->name}}</p>
+                    @else
+                    <p>Recent Articles</p>
+                    @endif
             </div>
             <div class="row">
-                @foreach ($testimonials as $testimonial)
+                @foreach ($articles as $article)
                     <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
                         <div class="techynaf-quote-card"> <img src="frontend/images/quote.png" alt="" class="techynaf-quote-2">
-                            <p>{{ $testimonial->description }}</p>
-                            <h5>{{ $testimonial->name }}</h5>
-                            <p class="occupation">{{ $testimonial->designation }}, {{ $testimonial->company }}</p>
+                            <p>{{ $article->description }}</p>
+                            <h5>{{ $article->title }}</h5>
+                            <a target="_blank" href="{{ $article->url }}" class="occupation">Visit</a>
                         </div>
                     </div>
                 @endforeach
+
+                <a href="{{route('article.index')}}" class="btn btn-primary">See More</a>
             </div>
         </div>
     </div>
 @endguest
-
+<!-- 
 @auth
     <div id="articles" class="techynaf-testiominal mb-4">
         <div class="container-fluid">
@@ -72,4 +84,4 @@
                 </form>
         </div>
     </div>
-@endauth
+@endauth -->

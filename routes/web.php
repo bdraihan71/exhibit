@@ -67,6 +67,8 @@ Route::middleware(['auth'])->group(function () {
     //contact
     Route::get('/mail', 'ContactController@showAll')->name('contact.showall');
 
+    
+
 
 });
 
@@ -76,3 +78,6 @@ Route::post('/contact-us', 'ContactController@mail')->name('contact.mail');
 Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//article
+Route::get('/article', 'ArticlesController@index')->name('article.index');

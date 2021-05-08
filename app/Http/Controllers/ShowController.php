@@ -11,6 +11,8 @@ use App\Project;
 use App\Skill;
 use App\Testimonial;
 use Illuminate\Http\Request;
+use App\Category;
+use App\Article;
 
 class ShowController extends Controller
 {
@@ -24,6 +26,9 @@ class ShowController extends Controller
         $projects = Project::all();
         $footer = Footer::find(1);
         $contact = Contact::find(1);
-        return view('layouts.body', compact('experiences', 'educations', 'testimonials', 'skills','profile','projects','footer','contact'));
+        $cats = Category::orderBy('name')->get();
+        $articles = Article::latest()->take(4)->get();
+        $selected_category = null;
+        return view('layouts.body', compact('experiences', 'educations', 'testimonials', 'skills','profile','projects','footer','contact', 'cats', 'articles', 'selected_category'));
     }
 }
