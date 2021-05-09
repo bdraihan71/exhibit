@@ -21,7 +21,7 @@
             <li><a href="#podcast">Podcast</a></li> 
 
             <li><a href="#photography">Photography</a></li>
-            <li><a href="#testimonial">Testimonial</a></li>
+            <!-- <li><a href="#testimonial">Testimonial</a></li> -->
             <li><a href="#contact">Contact</a></li>
             @if (Auth::check())
                 <li><a href="{{route('contact.showall')}}">Mail</a></li>

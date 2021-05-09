@@ -1,5 +1,5 @@
 @guest
-<!-- Articles -->
+<!-- Podcasts -->
     <div id="podcast" class="techynaf-testiominal mb-4">
         <div class="container-fluid">
             <div class="row">
@@ -13,9 +13,9 @@
                     @if($selected_category)
                     <p>{{$selected_category->name}}</p>
                     @else
-                    <p>Recent Articles</p>
+                    <p>Recent Podcasts</p>
                     @endif
-                    <a class="btn btn-primary" href="{{ route('podcast.create') }}">Create New Article</a>
+                    <a class="btn btn-primary" href="{{ route('podcast.create') }}">Create New Podcast</a>
             </div>
             <div class="row">
                 @foreach ($podcasts as $podcast)

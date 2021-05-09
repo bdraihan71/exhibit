@@ -13,6 +13,7 @@ use App\Testimonial;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Article;
+use App\Podcast;
 
 class ShowController extends Controller
 {
@@ -29,6 +30,7 @@ class ShowController extends Controller
         $cats = Category::orderBy('name')->get();
         $articles = Article::latest()->take(4)->get();
         $selected_category = null;
-        return view('layouts.body', compact('experiences', 'educations', 'testimonials', 'skills','profile','projects','footer','contact', 'cats', 'articles', 'selected_category'));
+        $podcasts = Podcast::latest()->take(4)->get();
+        return view('layouts.body', compact('podcasts','experiences', 'educations', 'testimonials', 'skills','profile','projects','footer','contact', 'cats', 'articles', 'selected_category'));
     }
 }

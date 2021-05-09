@@ -21,16 +21,16 @@
     </div>
     @endif
 
-    <div id="articles" class="techynaf-testiominal mb-4">
-        <a href="{{route('article.index')}}" class="btn btn-primary" type="submit">See Articles</a>
-        <h3 class="pl-4">Add a new article</h3>
+    <div id="podcasts" class="techynaf-testiominal mb-4">
+        <a href="{{route('podcast.index')}}" class="btn btn-primary" type="submit">See Podcasts</a>
+        <h3 class="pl-4">Add a new podcast</h3>
         
-        <form method="post" action="{{route('article.save')}}">
+        <form method="post" action="{{route('podcast.save')}}">
             @csrf
             <div class="container-fluid">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Title</label>
-                    <input name="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add a title of your article">
+                    <input name="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add a title of your podcast">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Category</label>
@@ -42,11 +42,11 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Description</label>
-                    <input name="description" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add one online description of the article">
+                    <input name="description" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add one online description of the podcast">
                 </div>  
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">URL</label>
-                    <input name="url" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add a URL that gets opened in a new tab when View Article button is clicked">
+                    <input name="url" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add a URL that gets opened in a new tab when View Podcast button is clicked">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Created At</label>

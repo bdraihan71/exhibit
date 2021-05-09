@@ -36,7 +36,6 @@
 
     @include('sections.projects')
 
-    @include('sections.testimonials')
 
     @include('sections.contact')
 

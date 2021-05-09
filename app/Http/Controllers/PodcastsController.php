@@ -22,7 +22,7 @@ class PodcastsController extends Controller
         
         $profile = Profile::find(1);
         $categories = Category::find(1);
-        return view('podcasts.index', compact('podcasts', 'profile', 'podcasts', 'cats', 'selected_category'));
+        return view('podcasts.index', compact('profile', 'podcasts', 'cats', 'selected_category'));
     }
 
     public function create(Request $request){
