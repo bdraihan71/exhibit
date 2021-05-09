@@ -18,7 +18,7 @@
             <li><a href="#skills">Skills</a></li>
 
             <li><a href="#articles">Articles</a></li> 
-            <!--li><a href="#skills">Podcast</a></li--> 
+            <li><a href="#podcast">Podcast</a></li> 
 
             <li><a href="#photography">Photography</a></li>
             <li><a href="#testimonial">Testimonial</a></li>

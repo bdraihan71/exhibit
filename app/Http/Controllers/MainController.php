@@ -27,6 +27,7 @@ class MainController extends Controller
         $contact = Contact::find(1);
         $cats = Category::orderBy('name')->get();
         $articles = Article::latest()->take(5)->get();
-        return view('layouts.body', compact('experiences','educations','testimonials','skills','profile','projects', 'footer','contact', 'cats', 'articles'));
+        $podcasts = Podcast::latest()->take(5)->get();
+        return view('layouts.body', compact('experiences','educations','testimonials','skills','profile','projects', 'footer','contact', 'cats', 'articles', 'podcasts'));
     }
 }

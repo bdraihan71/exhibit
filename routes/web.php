@@ -84,8 +84,16 @@ Route::get('/article', 'ArticlesController@index')->name('article.index');
 Route::get('/article/create', 'ArticlesController@create')->name('article.create');
 Route::post('/article', 'ArticlesController@save')->name('article.save');
 
-//TODO:: make controller functions & view for the ArticlesController@edit function
-
 Route::get('/article/{article}/edit', 'ArticlesController@edit')->name('article.edit');
 Route::post('/article/{article}', 'ArticlesController@update')->name('article.update');
 Route::get('/article/{article}/delete', 'ArticlesController@delete')->name('article.delete');
+
+//podcast
+
+Route::get('/podcast', 'PodcastsController@index')->name('podcast.index');
+Route::get('/podcast/create', 'PodcastsController@create')->name('podcast.create');
+Route::post('/podcast', 'PodcastsController@save')->name('podcast.save');
+
+Route::get('/podcast/{podcast}/edit', 'PodcastsController@edit')->name('podcast.edit');
+Route::post('/podcast/{podcast}', 'PodcastsController@update')->name('podcast.update');
+Route::get('/podcast/{podcast}/delete', 'PodcastsController@delete')->name('podcast.delete');
