@@ -88,3 +88,4 @@ Route::post('/article', 'ArticlesController@save')->name('article.save');
 
 Route::get('/article/{article}/edit', 'ArticlesController@edit')->name('article.edit');
 Route::post('/article/{article}', 'ArticlesController@update')->name('article.update');
+Route::get('/article/{article}/delete', 'ArticlesController@delete')->name('article.delete');

@@ -47,5 +47,20 @@ class ArticlesController extends Controller
         ]);
         return redirect()->back();
     }
+    public function update(Request $request, Article $article){
+        $article->update([
+            "title" => $request->title,
+            "category_id" => $request->category_id,
+            "description" => $request->description,
+            "url" => $request->url,
+            "created_at" => $request->created_at
+        ]);
+        return redirect()->back();
+    }
+    
+    public function delete(Request $request, Article $article){
+        $article->delete();
+        return redirect()->route('article.index');
+    }
     
 }

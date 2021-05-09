@@ -22,8 +22,9 @@
     @endif
 
     <div id="articles" class="techynaf-testiominal mb-4">
+        <a href="{{route('article.index')}}" class="btn btn-primary" type="submit">See Articles</a>
         <h3 class="pl-4">Add a new article</h3>
-        <form method="post" action="{{route('article.save')}}">
+        <form method="post" action="{{route('article.update', ['article' => $article->id])}}">
             @csrf
             <div class="container-fluid">
                 <div class="mb-3">
@@ -51,6 +52,7 @@
                     <input  value="{{$article->created_at}}" name="created_at" value="" type="date" class="form-control" id="exampleFormControlInput1" placeholder="Showing today's date by default, change to any past date if required">
                 </div>
                 <button class="btn btn-primary" type="submit">Save</button>
+                <a href="{{route('article.delete', ['article' => $article->id])}}" class="btn btn-danger">Delete</a>
             </div>
         </form>
     </div>

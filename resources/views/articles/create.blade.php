@@ -22,7 +22,9 @@
     @endif
 
     <div id="articles" class="techynaf-testiominal mb-4">
+        <a href="{{route('article.index')}}" class="btn btn-primary" type="submit">See Articles</a>
         <h3 class="pl-4">Add a new article</h3>
+        
         <form method="post" action="{{route('article.save')}}">
             @csrf
             <div class="container-fluid">

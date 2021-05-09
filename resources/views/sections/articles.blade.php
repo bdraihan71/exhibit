@@ -24,6 +24,7 @@
                             <p>{{ $article->description }}</p>
                             <h5>{{ $article->title }}</h5>
                             <a target="_blank" href="{{ $article->url }}" class="occupation">Visit</a>
+                            <a href="{{route('article.edit', ['article' => $article->id])}}" class="occupation">Edit</a>
                         </div>
                     </div>
                 @endforeach
