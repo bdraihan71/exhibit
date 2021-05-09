@@ -31,6 +31,12 @@ class ArticlesController extends Controller
         return view('articles.create', compact('profile', 'categories'));
     }
 
+    public function edit(Request $request, Article $article){
+        $profile = Profile::find(1);
+        $categories = Category::orderBy('name')->get();
+        return view('articles.edit', compact('profile', 'categories', 'article'));
+    }
+
     public function save(Request $request){
         Article::create([
             "title" => $request->title,
