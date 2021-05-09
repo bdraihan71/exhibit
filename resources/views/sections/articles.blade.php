@@ -15,6 +15,7 @@
                     @else
                     <p>Recent Articles</p>
                     @endif
+                    <a class="btn btn-primary" href="{{ route('article.create') }}">Create New Article</a>
             </div>
             <div class="row">
                 @foreach ($articles as $article)
