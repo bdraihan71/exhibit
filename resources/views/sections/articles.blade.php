@@ -4,18 +4,24 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12"> <span class="heading-meta style-1">Say About Me</span>
-                    <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">Articles</h2> </div>
-
-                    @foreach($cats as $category)
-                        <a class="btn btn-primary" href="{{route('article.index', ['category_id'=>$category->id])}}">{{ $category->name }}</a>
-                    @endforeach
+                    <div class="row">
+                        <h2 class="techynaf-heading animate-box ml-4" data-animate-effect="fadeInLeft">Articles</h2> 
+                    </div>
+                    <div class="col text-center">
+                        @foreach($cats as $category)
+                            <a class="btn btn btn-outline-primary btn-category ml-2 mb-4" href="{{route('article.index', ['category_id'=>$category->id])}}">{{ $category->name }}</a>
+                        @endforeach
+                    </div>
+                </div>
                     
-                    @if($selected_category)
-                    <p>{{$selected_category->name}}</p>
-                    @else
-                    <p>Recent Articles</p>
-                    @endif
-                    <a class="btn btn-primary" href="{{ route('article.create') }}">Create New Article</a>
+                    <div class="row">
+                        @if($selected_category)
+                            <h4 class="themed-color ml-5">{{$selected_category->name}}</h4>
+                        @else
+                            <h4 class="themed-color ml-5">Recent Articles</h4>
+                        @endif
+                    </div>
+                    
             </div>
             <div class="row">
                 @foreach ($articles as $article)
@@ -28,8 +34,14 @@
                         </div>
                     </div>
                 @endforeach
-
-                <a href="{{route('article.index')}}" class="btn btn-primary">See More</a>
+                
+            </div>
+            <div class="row mt-2">
+                <a href="{{route('article.index')}}" class="btn btn-category btn-outline-primary ml-3">See More</a>
+            </div>
+            <div class="row mt-2">
+            
+                <a class="btn btn-category btn-outline-primary ml-3" href="{{ route('article.create') }}">Create New Article</a>
             </div>
         </div>
     </div>

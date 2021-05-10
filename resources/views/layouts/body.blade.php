@@ -30,9 +30,9 @@
 
 
     @include('sections.articles')
-    
+    {{--
     @include('sections.podcasts')
-    @include('sections.othermedias')
+    @include('sections.othermedias')--}}
 
     @include('sections.projects')
 

@@ -21,15 +21,15 @@
     </div>
     @endif
 
-    <div id="podcasts" class="techynaf-testiominal mb-4">
-        <a href="{{route('podcast.index')}}" class="btn btn-primary" type="submit">See Podcasts</a>
-        <h3 class="pl-4">Add a new podcast</h3>
-        <form method="post" action="{{route('podcast.update', ['podcast' => $podcast->id])}}">
+    <div id="articles" class="techynaf-testiominal mb-4">
+        <a href="{{route('article.index')}}" class="btn btn-primary" type="submit">See Articles</a>
+        <h3 class="pl-4">Add a new article</h3>
+        <form method="post" action="{{route('article.update', ['article' => $article->id])}}">
             @csrf
             <div class="container-fluid">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Title</label>
-                    <input value="{{$podcast->title}}" name="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add a title of your podcast">
+                    <input value="{{$article->title}}" name="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add a title of your article">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Category</label>
@@ -41,18 +41,18 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Description</label>
-                    <input  value="{{$podcast->description}}" name="description" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add one online description of the podcast">
+                    <input  value="{{$article->description}}" name="description" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add one online description of the article">
                 </div>  
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">URL</label>
-                    <input  value="{{$podcast->url}}" name="url" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add a URL that gets opened in a new tab when View Podcast button is clicked">
+                    <input  value="{{$article->url}}" name="url" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add a URL that gets opened in a new tab when View Article button is clicked">
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Created At</label>
-                    <input  value="{{$podcast->created_at}}" name="created_at" value="" type="date" class="form-control" id="exampleFormControlInput1" placeholder="Showing today's date by default, change to any past date if required">
+                    <input  value="{{$article->created_at}}" name="created_at" value="" type="date" class="form-control" id="exampleFormControlInput1" placeholder="Showing today's date by default, change to any past date if required">
                 </div>
                 <button class="btn btn-primary" type="submit">Save</button>
-                <a href="{{route('podcast.delete', ['podcast' => $podcast->id])}}" class="btn btn-danger">Delete</a>
+                <a href="{{route('article.delete', ['article' => $article->id])}}" class="btn btn-danger">Delete</a>
             </div>
         </form>
     </div>
