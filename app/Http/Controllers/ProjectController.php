@@ -37,7 +37,7 @@ class ProjectController extends Controller
     {
         $education = Project::find($id);
         $education->delete();
-        return redirect('/edit')->with('success', 'Your project has been successfully deleted');
+        return redirect('/edit')->with('success', 'Your photography has been successfully deleted');
     }
 
     public function edit($id)

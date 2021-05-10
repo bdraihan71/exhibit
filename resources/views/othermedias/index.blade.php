@@ -20,24 +20,9 @@
         </button>
     </div>
     @endif
-    @include('sections.informations')
+ 
 
-    @include('sections.experience')
-
-    @include('sections.education')
-
-    @include('sections.skills')
-
-
-    @include('sections.articles')
-    
-    @include('sections.podcasts')
     @include('sections.othermedias')
-
-    @include('sections.projects')
-
-
-    @include('sections.contact')
 
     @include('sections.footer')
 @endsection

@@ -13,6 +13,7 @@ use App\Testimonial;
 use Illuminate\Http\Request;
 use App\Category;
 use App\Article;
+use App\Podcast;
 class MainController extends Controller
 {
     public function index()

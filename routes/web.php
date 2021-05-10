@@ -97,3 +97,14 @@ Route::post('/podcast', 'PodcastsController@save')->name('podcast.save');
 Route::get('/podcast/{podcast}/edit', 'PodcastsController@edit')->name('podcast.edit');
 Route::post('/podcast/{podcast}', 'PodcastsController@update')->name('podcast.update');
 Route::get('/podcast/{podcast}/delete', 'PodcastsController@delete')->name('podcast.delete');
+
+
+//other media
+
+Route::get('/othermedia', 'OtherMediaController@index')->name('othermedia.index');
+Route::get('/othermedia/create', 'OtherMediaController@create')->name('othermedia.create');
+Route::post('/othermedia', 'OtherMediaController@save')->name('othermedia.save');
+
+Route::get('/othermedia/{podcast}/edit', 'OtherMediaController@edit')->name('othermedia.edit');
+Route::post('/othermedia/{podcast}', 'OtherMediaController@update')->name('othermedia.update');
+Route::get('/othermedia/{podcast}/delete', 'OtherMediaController@delete')->name('othermedia.delete');
