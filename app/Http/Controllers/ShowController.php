@@ -34,4 +34,10 @@ class ShowController extends Controller
         $othermedias = OtherMedia::latest()->take(4)->get();
         return view('layouts.body', compact('othermedias', 'podcasts','experiences', 'educations', 'testimonials', 'skills','profile','projects','footer','contact', 'cats', 'articles', 'selected_category'));
     }
+
+    public function seeImage(Request $request){
+        $profile = Profile::find(1);
+        $image = $request->image;
+        return view('see-image', compact('image', 'profile'));
+    }
 }

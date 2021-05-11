@@ -9,14 +9,19 @@
             <div class="row">
                 @foreach ($projects as $project)
                     <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-                        <a href="#" class="desc">
-                            <div class="project"> <img src="{{ $project->image }}" class="img-fluid" alt="">
-                                <div class="desc">
-                                    <div class="con">
-                                    <h3>{{ $project->name }}</h3> <span>{{ $project->description }}</span> </div>
-                                </div>
+                    <a href="{{route('see-image')}}?image={{$project->image}}" class="desc">
+                        <div class="project">
+                        <div class="center-cropped" 
+                                style="background-image: url('{{$project->image}}');">
                             </div>
-                        </a>
+                            <div class="desc">
+
+                                <div class="con">
+                                    
+                                <h3>{{ $project->name }}</h3> <span>{{ $project->description }}</span> </div>
+                            </div>
+                        </div>
+                    </a>
                     </div>
                 @endforeach
             </div>
@@ -35,9 +40,14 @@
                 @foreach ($projects as $project)
                 <div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
                     <a href="#" class="desc">
-                        <div class="project"> <img src="{{ $project->image }}" class="img-fluid" alt="">
+                        <div class="project">
+                        <div class="center-cropped" 
+                                style="background-image: url('{{$project->image}}');">
+                            </div>
                             <div class="desc">
+
                                 <div class="con">
+                                    
                                 <h3>{{ $project->name }}</h3> <span>{{ $project->description }}</span> </div>
                             </div>
                         </div>

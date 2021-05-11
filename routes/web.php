@@ -108,3 +108,6 @@ Route::post('/othermedia', 'OtherMediaController@save')->name('othermedia.save')
 Route::get('/othermedia/{podcast}/edit', 'OtherMediaController@edit')->name('othermedia.edit');
 Route::post('/othermedia/{podcast}', 'OtherMediaController@update')->name('othermedia.update');
 Route::get('/othermedia/{podcast}/delete', 'OtherMediaController@delete')->name('othermedia.delete');
+
+
+Route::get('/see-image', 'ShowController@seeImage')->name('see-image');
