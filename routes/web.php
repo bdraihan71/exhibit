@@ -67,6 +67,10 @@ Route::middleware(['auth'])->group(function () {
     //contact
     Route::get('/mail', 'ContactController@showAll')->name('contact.showall');
 
+
+    //article
+    Route::get('/article/create', 'ArticlesController@create')->name('article.create');
+    Route::post('/article', 'ArticlesController@save')->name('article.save');
     
 
 
@@ -81,8 +85,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //article
 Route::get('/article', 'ArticlesController@index')->name('article.index');
-Route::get('/article/create', 'ArticlesController@create')->name('article.create');
-Route::post('/article', 'ArticlesController@save')->name('article.save');
 
 Route::get('/article/{article}/edit', 'ArticlesController@edit')->name('article.edit');
 Route::post('/article/{article}', 'ArticlesController@update')->name('article.update');

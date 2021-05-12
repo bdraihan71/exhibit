@@ -14,6 +14,8 @@ use Illuminate\Http\Request;
 use App\Category;
 use App\Article;
 use App\Podcast;
+use App\OtherMedia;
+use App\Subscriber;
 class MainController extends Controller
 {
     public function index()
@@ -29,6 +31,10 @@ class MainController extends Controller
         $cats = Category::orderBy('name')->get();
         $articles = Article::latest()->take(5)->get();
         $podcasts = Podcast::latest()->take(5)->get();
-        return view('layouts.body', compact('experiences','educations','testimonials','skills','profile','projects', 'footer','contact', 'cats', 'articles', 'podcasts'));
+
+        $othermedias = OtherMedia::latest()->take(4)->get();
+        $subscribers = Subscriber::latest()->take(4)->get();
+        $selected_category = null;
+        return view('layouts.body', compact('subscribers', 'othermedias', 'podcasts', 'experiences','educations','testimonials','skills','profile','projects', 'footer','contact', 'cats', 'articles', 'podcasts', 'selected_category'));
     }
 }
