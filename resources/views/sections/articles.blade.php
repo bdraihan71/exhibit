@@ -26,11 +26,11 @@
             <div class="row">
                 @foreach ($articles as $article)
                     <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                        <div class="techynaf-quote-card"> <img src="frontend/images/quote.png" alt="" class="techynaf-quote-2">
-                            <p>{{ $article->description }}</p>
+                        <div class="techynaf-quote-card"> <img src="frontend/images/quote.png" alt="" class="techynaf-quote-2">    
                             <h5>{{ $article->title }}</h5>
+                            <p>{{ $article->description }}</p>
                             <a target="_blank" href="{{ $article->url }}" class="btn btn btn-outline-primary btn-category ml-2 mb-4">Visit</a>
-                            <a href="{{route('article.edit', ['article' => $article->id])}}" class="occupation">Edit</a>
+                            <a href="{{route('article.edit', ['article' => $article->id])}}" class="btn btn btn-outline-primary btn-category ml-2 mb-4">Edit</a>
                         </div>
                     </div>
                 @endforeach

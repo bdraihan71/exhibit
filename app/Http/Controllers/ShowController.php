@@ -29,7 +29,7 @@ class ShowController extends Controller
         $projects = Project::all();
         $footer = Footer::find(1);
         $contact = Contact::find(1);
-        $cats = Category::orderBy('name')->get();
+        $cats = Category::orderBy('id')->get();
         $articles = Article::latest()->take(4)->get();
         $selected_category = null;
         $podcasts = Podcast::latest()->take(4)->get();

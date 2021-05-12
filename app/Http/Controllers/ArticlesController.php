@@ -18,7 +18,8 @@ class ArticlesController extends Controller
             $articles = Article::all();
             $selected_category = null;
         }
-        $cats = Category::orderBy('name')->get();
+        $cats = Category::orderBy('id')->get();
+        dd()
         
         $profile = Profile::find(1);
         $categories = Category::find(1);
@@ -27,13 +28,13 @@ class ArticlesController extends Controller
 
     public function create(Request $request){
         $profile = Profile::find(1);
-        $categories = Category::orderBy('name')->get();
+        $categories = Category::orderBy('id')->get();
         return view('articles.create', compact('profile', 'categories'));
     }
 
     public function edit(Request $request, Article $article){
         $profile = Profile::find(1);
-        $categories = Category::orderBy('name')->get();
+        $categories = Category::orderBy('id')->get();
         return view('articles.edit', compact('profile', 'categories', 'article'));
     }
 
