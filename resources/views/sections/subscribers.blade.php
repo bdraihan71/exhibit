@@ -4,7 +4,7 @@
     <div id="subscribe" class="techynaf-testiominal mb-4">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12"> <span class="heading-meta style-1">Say About Me</span>
+                <div class="col-md-12"> <span class="heading-meta style-1">Lets get connected</span>
                     <div class="row">
                         <h2 class="techynaf-heading animate-box ml-4" data-animate-effect="fadeInLeft">Subscribers</h2> 
                     </div>

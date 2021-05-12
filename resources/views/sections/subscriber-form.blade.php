@@ -4,7 +4,7 @@
     <div id="subscribe" class="techynaf-testiominal mb-4">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-md-12"> <span class="heading-meta style-1">Say About Me</span>
+                <div class="col-md-12"> <span class="heading-meta style-1">Subscribe to me</span>
                     <div class="row">
                         <h2 class="techynaf-heading animate-box ml-4" data-animate-effect="fadeInLeft">Subscribers</h2> 
                     </div>
@@ -32,7 +32,7 @@
 
             <div id="subscribers" class="techynaf-testiominal mb-4">
                 <a href="{{route('subscriber.index')}}" class="btn btn-category btn-outline-primary ml-3" type="submit">See Subscribers</a>
-                <h3 class="pl-4">Be a subscriber</h3>
+                <h3 class="techynaf-heading ml-3">Be a subscriber</h3>
                 
                 <form method="post" action="{{route('subscriber.save')}}">
                     @csrf
