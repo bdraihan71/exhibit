@@ -19,7 +19,6 @@ class ArticlesController extends Controller
             $selected_category = null;
         }
         $cats = Category::orderBy('id')->get();
-        dd()
         
         $profile = Profile::find(1);
         $categories = Category::find(1);
