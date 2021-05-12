@@ -35,9 +35,9 @@
 
     @include('sections.projects')
 
-
-    @include('sections.contact')
     @include('sections.subscriber-form')
+    @include('sections.contact')
+    
     @include('sections.footer')
 @endsection
 <script>
