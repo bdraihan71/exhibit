@@ -7,6 +7,7 @@ use App\Subscriber;
 use App\Profile;
 use App\Testimonial;
 use App\Category;
+use Validator;
 
 class SubcribersController extends Controller
 {
@@ -34,11 +35,16 @@ class SubcribersController extends Controller
     
 
     public function save(Request $request){
+
+        $this->validate($request, [
+            'name' => 'required|string',
+            'email' => 'required|email'
+        ]);
         Subscriber::create([
             "name" => $request->name,
             "email" => $request->email
         ]);
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Thanks for subscribing!');
     }
     
     
