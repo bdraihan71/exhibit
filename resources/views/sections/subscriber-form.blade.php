@@ -1,7 +1,7 @@
 @guest
 
 <!-- Subscribers -->
-    <div id="subscribe" class="techynaf-testiominal">
+    <div id="subscribe" class="techynaf-testiominal mb-4">
 
         @if(session('success'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -37,6 +37,7 @@
                 </form>
             </div>
         </div>
+    </div>
     </div>
 @endguest
 
