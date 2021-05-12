@@ -29,6 +29,7 @@
 
             <div class="row">
                 <a href="{{route('podcast.index')}}" class="btn btn btn-outline-primary btn-category ml-2 mb-4">See More</a>
+                <a href="/" class="btn btn-category btn-outline-primary ml-3">Home</a>
             </div>
         </div>
     </div>
