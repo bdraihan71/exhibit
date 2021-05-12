@@ -20,24 +20,10 @@
         </button>
     </div>
     @endif
-    @include('sections.informations')
+ 
 
-    @include('sections.experience')
+    @include('sections.subscribers')
 
-    @include('sections.education')
-
-    @include('sections.skills')
-
-
-    @include('sections.articles')
-    @include('sections.podcasts')
-    @include('sections.othermedias')
-
-    @include('sections.projects')
-
-
-    @include('sections.contact')
-    @include('sections.subscriber-form')
     @include('sections.footer')
 @endsection
 <script>

@@ -13,7 +13,7 @@
                         @endforeach
                     </div>
                 </div>
-                    
+
                     <div class="row">
                         @if($selected_category)
                             <h4 class="themed-color ml-5">{{$selected_category->name}}</h4>
@@ -29,7 +29,7 @@
                         <div class="techynaf-quote-card"> <img src="frontend/images/quote.png" alt="" class="techynaf-quote-2">
                             <p>{{ $article->description }}</p>
                             <h5>{{ $article->title }}</h5>
-                            <a target="_blank" href="{{ $article->url }}" class="occupation">Visit</a>
+                            <a target="_blank" href="{{ $article->url }}" class="btn btn btn-outline-primary btn-category ml-2 mb-4">Visit</a>
                             <a href="{{route('article.edit', ['article' => $article->id])}}" class="occupation">Edit</a>
                         </div>
                     </div>

@@ -1,54 +1,60 @@
 @guest
-<!-- Podcasts -->
-    <div id="podcast" class="techynaf-testiominal mb-4">
+
+<!-- Subscribers -->
+    <div id="subscribe" class="techynaf-testiominal mb-4">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12"> <span class="heading-meta style-1">Say About Me</span>
-                <div class="row">    
-                <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">Podcast</h2> </div>
-
-                    @foreach($cats as $category)
-                        <a class="btn btn btn-outline-primary btn-category ml-2 mb-4" href="{{route('podcast.index', ['category_id'=>$category->id])}}">{{ $category->name }}</a>
-                    @endforeach
-                </div>
                     <div class="row">
-                        @if($selected_category)
-                            <h4 class="themed-color ml-5">{{$selected_category->name}}</h4>
-                        @else
-                            <h4 class="themed-color ml-5">Recent Podcasts</h4>
-                        @endif
+                        <h2 class="techynaf-heading animate-box ml-4" data-animate-effect="fadeInLeft">Subscribers</h2> 
                     </div>
-            </div>
-            <div class="row">
-                @foreach ($podcasts as $podcast)
-                    <div class="col-md-6 animate-box" data-animate-effect="fadeInLeft">
-                        <div class="techynaf-quote-card"> <img src="frontend/images/quote.png" alt="" class="techynaf-quote-2">
-                        <p>{{ $podcast->description }}</p>
-                        <h5>{{ $podcast->title }}</h5>
-                        <div class="row">
-                            <div class="col-md-12 p-3">
-                                    <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item" width="560" height="315" src="{!!$podcast->url!!}"></iframe"
-                                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                                    </div>
-                                    <a href="{{route('podcast.edit', ['podcast' => $podcast->id])}}" class="btn btn-danger">Edit</a>
-                            </div>
-                        </div>  
-                        </div>
-                    </div>
-                @endforeach
-            </div>
+                </div>
 
-            <div class="row">
-                <a href="{{route('podcast.index')}}" class="btn btn btn-outline-primary btn-category ml-2 mb-4">See More</a>
-                <a class="btn btn btn-outline-primary btn-category ml-2 mb-4" href="{{ route('podcast.create') }}">Create New Podcast</a>
+                @if(count($errors) > 0)
+                    @foreach($errors->all() as $error)
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            {{$error}}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endforeach
+                @endif
+
+    @if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        {{session('success')}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    @endif
+
+            <div id="subscribers" class="techynaf-testiominal mb-4">
+                <a href="{{route('subscriber.index')}}" class="btn btn-category btn-outline-primary ml-3" type="submit">See Subscribers</a>
+                <h3 class="pl-4">Be a subscriber</h3>
+                
+                <form method="post" action="{{route('subscriber.save')}}">
+                    @csrf
+                    <div class="container-fluid">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Name</label>
+                            <input name="name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Email</label>
+                            <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="email">
+                        </div>
+                        <button class="btn btn-category btn-outline-primary ml-3" type="submit">Save</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 @endguest
 <!-- 
 @auth
-    <div id="podcasts" class="techynaf-testiominal mb-4">
+    <div id="subscribers" class="techynaf-testiominal mb-4">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12"> <span class="heading-meta style-1">Say About Me</span>

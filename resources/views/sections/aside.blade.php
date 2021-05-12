@@ -18,12 +18,11 @@
             <li><a href="#skills">Skills</a></li>
 
             <li><a href="#articles">Articles</a></li> 
-            {{--
-                <li><a href="#podcast">Podcast</a></li> 
-                <li><a href="#othermedia">Other Media</a></li> 
-            --}}
+            <li><a href="#podcast">Podcast</a></li> 
+            <li><a href="#othermedia">Other Media</a></li> 
             <li><a href="#photography">Photography</a></li>
             <!-- <li><a href="#testimonial">Testimonial</a></li> -->
+            <li><a href="#subscribe">Subscribe</a></li>
             <li><a href="#contact">Contact</a></li>
             @if (Auth::check())
                 <li><a href="{{route('contact.showall')}}">Mail</a></li>

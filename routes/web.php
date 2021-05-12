@@ -111,3 +111,10 @@ Route::get('/othermedia/{podcast}/delete', 'OtherMediaController@delete')->name(
 
 
 Route::get('/see-image', 'ShowController@seeImage')->name('see-image');
+
+//subscriber
+
+Route::get('/subscriber', 'SubcribersController@index')->name('subscriber.index');
+Route::get('/subscriber/create', 'SubcribersController@create')->name('subscriber.create');
+Route::post('/subscriber', 'SubcribersController@save')->name('subscriber.save');
+Route::get('/subscriber/{subscriber}/delete', 'SubcribersController@delete')->name('subscriber.delete');

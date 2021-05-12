@@ -15,6 +15,8 @@ use App\Category;
 use App\Article;
 use App\Podcast;
 use App\OtherMedia;
+use App\Subscriber;
+
 class ShowController extends Controller
 {
     public function index()
@@ -32,7 +34,9 @@ class ShowController extends Controller
         $selected_category = null;
         $podcasts = Podcast::latest()->take(4)->get();
         $othermedias = OtherMedia::latest()->take(4)->get();
-        return view('layouts.body', compact('othermedias', 'podcasts','experiences', 'educations', 'testimonials', 'skills','profile','projects','footer','contact', 'cats', 'articles', 'selected_category'));
+        $subscribers = Subscriber::latest()->take(4)->get();
+        
+        return view('layouts.body', compact('subscribers', 'othermedias', 'podcasts','experiences', 'educations', 'testimonials', 'skills','profile','projects','footer','contact', 'cats', 'articles', 'selected_category'));
     }
 
     public function seeImage(Request $request){

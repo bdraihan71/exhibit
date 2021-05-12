@@ -7,15 +7,19 @@
                     <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">Other Media</h2> </div>
 
                     @foreach($cats as $category)
-                        <a class="btn btn-primary" href="{{route('othermedia.index', ['category_id'=>$category->id])}}">{{ $category->name }}</a>
+                        <a class="btn btn btn-outline-primary btn-category ml-2 mb-4" href="{{route('othermedia.index', ['category_id'=>$category->id])}}">{{ $category->name }}</a>
                     @endforeach
+
+
+                    <div class="row">
+                        @if($selected_category)
+                            <h4 class="themed-color ml-5">{{$selected_category->name}}</h4>
+                        @else
+                            <h4 class="themed-color ml-5">Recent Other Medias</h4>
+                        @endif
+                    </div>
+
                     
-                    @if($selected_category)
-                    <p>{{$selected_category->name}}</p>
-                    @else
-                    <p>Recent Other Medias</p>
-                    @endif
-                    <a class="btn btn-primary" href="{{ route('othermedia.create') }}">Create New Other Media</a>
             </div>
             <div class="row">
                 @foreach ($othermedias as $othermedia)
@@ -23,14 +27,18 @@
                         <div class="techynaf-quote-card"> <img src="frontend/images/quote.png" alt="" class="techynaf-quote-2">
                             <p>{{ $othermedia->description }}</p>
                             <h5>{{ $othermedia->title }}</h5>
-                            <a target="_blank" href="{{ $othermedia->url }}" class="occupation">Visit</a>
+                            <a target="_blank" href="{{ $othermedia->url }}" class="btn btn btn-outline-primary btn-category ml-2 mb-4">Visit</a>
                             <a href="{{route('othermedia.edit', ['othermedia' => $othermedia->id])}}" class="occupation">Edit</a>
                         </div>
                     </div>
                 @endforeach
 
-                <a href="{{route('othermedia.index')}}" class="btn btn-primary">See More</a>
             </div>
+
+            <div class="row">
+                    <a href="{{route('othermedia.index')}}" class="btn btn btn-outline-primary btn-category ml-2 mb-4">See More</a>
+                    <a class="btn btn btn-outline-primary btn-category ml-2 mb-4" href="{{ route('othermedia.create') }}">Create New Other Media</a>
+                </div>
         </div>
     </div>
 @endguest
