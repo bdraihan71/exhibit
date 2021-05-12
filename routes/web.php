@@ -71,8 +71,34 @@ Route::middleware(['auth'])->group(function () {
     //article
     Route::get('/article/create', 'ArticlesController@create')->name('article.create');
     Route::post('/article', 'ArticlesController@save')->name('article.save');
+    Route::get('/article/{article}/edit', 'ArticlesController@edit')->name('article.edit');
+    Route::post('/article/{article}', 'ArticlesController@update')->name('article.update');
+    Route::get('/article/{article}/delete', 'ArticlesController@delete')->name('article.delete');
     
 
+    //podcast
+    Route::get('/podcast/create', 'PodcastsController@create')->name('podcast.create');
+    Route::post('/podcast', 'PodcastsController@save')->name('podcast.save');
+
+    Route::get('/podcast/{podcast}/edit', 'PodcastsController@edit')->name('podcast.edit');
+    Route::post('/podcast/{podcast}', 'PodcastsController@update')->name('podcast.update');
+    Route::get('/podcast/{podcast}/delete', 'PodcastsController@delete')->name('podcast.delete');
+
+
+    //other media
+
+    Route::get('/othermedia/create', 'OtherMediaController@create')->name('othermedia.create');
+    Route::post('/othermedia', 'OtherMediaController@save')->name('othermedia.save');
+
+    Route::get('/othermedia/{podcast}/edit', 'OtherMediaController@edit')->name('othermedia.edit');
+    Route::post('/othermedia/{podcast}', 'OtherMediaController@update')->name('othermedia.update');
+    Route::get('/othermedia/{podcast}/delete', 'OtherMediaController@delete')->name('othermedia.delete');
+
+
+
+    //subscriber
+    Route::get('/subscriber', 'SubcribersController@index')->name('subscriber.index');
+    Route::get('/subscriber/{subscriber}/delete', 'SubcribersController@delete')->name('subscriber.delete');
 
 });
 
@@ -86,37 +112,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 //article
 Route::get('/article', 'ArticlesController@index')->name('article.index');
 
-Route::get('/article/{article}/edit', 'ArticlesController@edit')->name('article.edit');
-Route::post('/article/{article}', 'ArticlesController@update')->name('article.update');
-Route::get('/article/{article}/delete', 'ArticlesController@delete')->name('article.delete');
-
 //podcast
 
 Route::get('/podcast', 'PodcastsController@index')->name('podcast.index');
-Route::get('/podcast/create', 'PodcastsController@create')->name('podcast.create');
-Route::post('/podcast', 'PodcastsController@save')->name('podcast.save');
-
-Route::get('/podcast/{podcast}/edit', 'PodcastsController@edit')->name('podcast.edit');
-Route::post('/podcast/{podcast}', 'PodcastsController@update')->name('podcast.update');
-Route::get('/podcast/{podcast}/delete', 'PodcastsController@delete')->name('podcast.delete');
 
 
 //other media
 
 Route::get('/othermedia', 'OtherMediaController@index')->name('othermedia.index');
-Route::get('/othermedia/create', 'OtherMediaController@create')->name('othermedia.create');
-Route::post('/othermedia', 'OtherMediaController@save')->name('othermedia.save');
-
-Route::get('/othermedia/{podcast}/edit', 'OtherMediaController@edit')->name('othermedia.edit');
-Route::post('/othermedia/{podcast}', 'OtherMediaController@update')->name('othermedia.update');
-Route::get('/othermedia/{podcast}/delete', 'OtherMediaController@delete')->name('othermedia.delete');
-
 
 Route::get('/see-image', 'ShowController@seeImage')->name('see-image');
 
 //subscriber
-
-Route::get('/subscriber', 'SubcribersController@index')->name('subscriber.index');
-Route::get('/subscriber/create', 'SubcribersController@create')->name('subscriber.create');
 Route::post('/subscriber', 'SubcribersController@save')->name('subscriber.save');
-Route::get('/subscriber/{subscriber}/delete', 'SubcribersController@delete')->name('subscriber.delete');
