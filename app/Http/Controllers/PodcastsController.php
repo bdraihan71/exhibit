@@ -11,18 +11,19 @@ use App\Category;
 class PodcastsController extends Controller
 {
     public function index(Request $request){
-        if($request->category_id != null){
-            $podcasts = Podcast::where('category_id', $request->category_id)->get();
-            $selected_category = Category::find( $request->category_id);
-        }else{
-            $podcasts = Podcast::all();
-            $selected_category = null;
-        }
+        // if($request->category_id != null){
+        //     $podcasts = Podcast::where('category_id', $request->category_id)->get();
+        //     $selected_category = Category::find( $request->category_id);
+        // }else{
+        //     $podcasts = Podcast::all();
+        //     $selected_category = null;
+        // }
+        $podcasts = Podcast::all();
         $cats = Category::orderBy('name')->get();
         
         $profile = Profile::find(1);
         $categories = Category::find(1);
-        return view('podcasts.index', compact('profile', 'podcasts', 'cats', 'selected_category'));
+        return view('podcasts.index', compact('profile', 'podcasts', 'cats'));
     }
 
     public function create(Request $request){
@@ -40,8 +41,8 @@ class PodcastsController extends Controller
     public function save(Request $request){
         Podcast::create([
             "title" => $request->title,
-            "category_id" => $request->category_id,
             "description" => $request->description,
+            "category_id" => 1,
             "url" => $request->url,
             "created_at" => $request->created_at
         ]);
@@ -50,9 +51,9 @@ class PodcastsController extends Controller
     public function update(Request $request, Podcast $podcast){
         $podcast->update([
             "title" => $request->title,
-            "category_id" => $request->category_id,
             "description" => $request->description,
             "url" => $request->url,
+            "category_id" => 1,
             "created_at" => $request->created_at
         ]);
         return redirect()->back();

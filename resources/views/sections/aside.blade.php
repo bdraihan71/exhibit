@@ -2,13 +2,15 @@
 <!-- Sidebar Section -->
 <aside id="techynaf-aside">
     <!-- Logo -->
-    <h1 id="techynaf-logo">
-        <div class="circular">
-            <img src="{{ url($profile->image) }}" alt="">
-        </div>
-        <br />
-        <a href="#introduction">{{ $profile->name }}<span>{{ $profile->designation }}</span></a>
-    </h1>
+    <a href="/">
+        <h1 id="techynaf-logo">
+            <div class="circular">
+                <img src="{{ url($profile->image) }}" alt="">
+            </div>
+            <br />
+            <a href="#introduction">{{ $profile->name }}<span>{{ $profile->designation }}</span></a>
+        </h1>
+    </a>
     <!-- Menu -->
     <nav id="techynaf-main-menu">
         <ul>

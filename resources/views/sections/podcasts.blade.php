@@ -5,19 +5,8 @@
             <div class="row">
                 <div class="col-md-12"> <span class="heading-meta style-1">Listen to me</span>
                 <div class="row">    
-                <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">Podcast</h2> </div>
-
-                    @foreach($cats as $category)
-                        <a class="btn btn btn-outline-primary btn-category ml-2 mb-4" href="{{route('podcast.index', ['category_id'=>$category->id])}}">{{ $category->name }}</a>
-                    @endforeach
+                    <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">Podcast</h2> </div>
                 </div>
-                    <div class="row">
-                        @if($selected_category)
-                            <h4 class="themed-color ml-5">{{$selected_category->name}}</h4>
-                        @else
-                            <h4 class="themed-color ml-5">Recent Podcasts</h4>
-                        @endif
-                    </div>
             </div>
             <div class="row">
                 @foreach ($podcasts as $podcast)
@@ -54,18 +43,6 @@
                 <div class="col-md-12"> <span class="heading-meta style-1">Listen to me</span>
                 <div class="row">    
                 <h2 class="techynaf-heading animate-box" data-animate-effect="fadeInLeft">Podcast</h2> </div>
-
-                    @foreach($cats as $category)
-                        <a class="btn btn btn-outline-primary btn-category ml-2 mb-4" href="{{route('podcast.index', ['category_id'=>$category->id])}}">{{ $category->name }}</a>
-                    @endforeach
-                </div>
-                    <div class="row">
-                        @if($selected_category)
-                            <h4 class="themed-color ml-5">{{$selected_category->name}}</h4>
-                        @else
-                            <h4 class="themed-color ml-5">Recent Podcasts</h4>
-                        @endif
-                    </div>
             </div>
             <div class="row">
                 @foreach ($podcasts as $podcast)

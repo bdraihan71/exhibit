@@ -33,14 +33,6 @@
                     <input name="title" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add a title of your podcast">
                 </div>
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Category</label>
-                    <select name="category_id" class="form-select" aria-label="Default select example">
-                        @foreach($categories as $c)
-                            <option value="{{$c->id}}">{{$c->name}}</option>
-                        @endforeach
-                    </select>
-                </div>
-                <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Description</label>
                     <input name="description" type="text" class="form-control" id="exampleFormControlInput1" placeholder="add one online description of the podcast">
                 </div>  
