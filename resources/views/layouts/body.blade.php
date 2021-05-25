@@ -31,10 +31,10 @@
 
     @include('sections.articles')
     @include('sections.podcasts')
-    @include('sections.othermedias')
+    
 
     @include('sections.projects')
-
+    @include('sections.othermedias')
     @include('sections.subscriber-form')
     @include('sections.contact')
     
